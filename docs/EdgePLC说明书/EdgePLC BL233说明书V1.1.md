@@ -1,6 +1,6 @@
 
 
-![EdgePLC A款 (2)](EdgePLC BL233说明书V1.1-images/image2.jpeg)
+![](EdgePLC BL233说明书V1.1-images/image1.png)
 
 版本：V1.1
 日期：2026-09-10
@@ -13,7 +13,7 @@ EdgePLC BL233系列
 
 
 
-![](EdgePLC BL233说明书V1.1-images/image1.png)
+![EdgePLC A款 (2)](EdgePLC BL233说明书V1.1-images/image2.jpeg)
 
 说明书
 
