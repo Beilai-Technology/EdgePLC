@@ -1,18 +1,34 @@
-# EdgePLC BL234说明书V1.1
+<figure>
+<img
+src="EdgePLC BL234说明书V1.1-images/image2.jpeg"
+style="width:2.97639in;height:3.98056in" alt="EdgePLC A款 (2)" />
+<figcaption><p>版本：V1.1<br />
+日期：2026-09-10<br />
+版权：<strong>深圳市钡铼技术有限公司<br />
+</strong>网址：<a
+href="http://www.bliiot.cn">www.bliiot.cn</a></p></figcaption>
+</figure>
 
-![image](EdgePLC BL234说明书V1.1-images/image39.jpeg)
-![image](EdgePLC BL234说明书V1.1-images/image39.jpeg)
-![image](EdgePLC BL234说明书V1.1-images/image28.png)
+EdgePLC BL234系列
 
-前言
+<figure>
+<img
+src="EdgePLC BL234说明书V1.1-images/image1.png"
+style="width:2.68681in;height:1.89653in" />
+<figcaption><p>说明书</p></figcaption>
+</figure>
+
+EdgePLC BL234工业边缘控制器
+
+**前言**
 
 感谢您使用深圳市钡铼技术有限公司的BL234系列，阅读本产品说明书能让您快速掌握本产品的功能和使用方法。
 
-版权声明
+> **版权声明**
 
 本说明书之所有权由深圳市钡铼技术有限公司所有。未经本公司之书面许可，任何单位和个人无权以任何形式复制、传播和转载本手册之任何部分，否则一切后果由违者自负。
 
-免责声明
+> **免责声明**
 
 由于运营商升级网络造成设备无法继续使用的，本公司不能提供免费的升级服务。由于特殊原因造成运营商网络服务中断时，本机将无法正常工作，本公司不承担由此带来的后果。
 
@@ -20,155 +36,582 @@
 
 本产品包含开源软件或第三方组件。因开源软件的缺陷、漏洞、兼容性问题、停止维护或协议变更等原因导致的系统故障、数据丢失或安全问题，本公司概不负责。用户需自行承担使用开源组件的相关风险。
 
-修订记录
+**修订记录**
 
-| 更新日期 | 文档版本 | 说明 | 修订内容 | 作者 |
-|---|---|---|---|---|
-| 2026.4.13 | Ver.1.0 | 首次发布 |  | ZJX |
 |  |  |  |  |  |
+|:--:|:--:|:--:|:--:|:--:|
+| **更新日期** | **文档版本** | **说明** | **修订内容** | **作者** |
+| 2026.4.13 | Ver.1.0 | 首次发布 |  | ZJX |
+| 2026.7.31 | Ver.1.1 | 部分更新 | 完善RTD、NTC N板使用说明，增加量程模式修改，优化软件支持 | ZJX |
 
-## 产品简介
+# 产品简介
 
-### 概述
+## 概述
 
-在工业自动化向“边缘计算+实时控制”深度融合的转型背景下，传统PLC面临智能计算的瓶颈，而通用工业计算机又难以满足高实时性控制的需求。EdgePLC BL234系列工业边缘控制器应运而生，旨在打破IT与OT的融合壁垒，提供真正意义上的“边缘控算一体”解决方案。
+在工业自动化向“边缘计算+实时控制”深度融合的转型背景下，传统PLC面临智能计算的瓶颈，而通用工业计算机又难以满足高实时性控制的需求。EdgePLC
+BL234系列工业边缘控制器应运而生，旨在打破IT与OT的融合壁垒，提供真正意义上的“边缘控算一体”解决方案。
 
-BL234系列采用“高性能ARM处理器 + 分布式I/O扩展”的架构，以全志科技T507-H处理器为核心，提供四核 ARM Cortex-A53架构，在保障毫秒级实时控制的同时，具备强大的本地数据处理能力。
+BL234系列采用“高性能ARM处理器 +
+分布式I/O扩展”的架构，以全志科技T507-H处理器为核心，提供四核 ARM
+Cortex-A53架构，在保障毫秒级实时控制的同时，具备强大的本地数据处理能力。
 
-EdgePLC BL234工业边缘控制器深度融合实时控制、边缘智能、协议转换、远程运维与二次开发等功能，支持IEC 61131-3标准编程环境（OpenPLC/NexPLC/CODESYS）、IGH EtherCAT硬实时主站，并可扩展多达32块N系列分布式I/O模块，覆盖DI/DO/AI/AO/温度采集等多种信号类型。软件层面基于Ubuntu 20.04系统，集成Docker、Node-RED、Python/C++开发环境，实现从数据采集、实时分析到智能决策的全流程闭环。
+EdgePLC
+BL234工业边缘控制器深度融合实时控制、边缘智能、协议转换、远程运维与二次开发等功能，支持IEC
+61131-3标准编程环境（OpenPLC/NexPLC/CODESYS）、IGH
+EtherCAT硬实时主站，并可扩展多达32块N系列分布式I/O模块，覆盖DI/DO/AI/AO/温度采集等多种信号类型。软件层面基于Ubuntu
+20.04系统，集成Docker、Node-RED、Python/C++开发环境，实现从数据采集、实时分析到智能决策的全流程闭环。
 
 BL234系列工业边缘控制器专为智能产线控制、储能EMS、光伏逆变器管理等“控制+计算”协同场景设计，通过将智能分析下沉至设备边缘，它不仅实现了控制逻辑的精准执行，更完成了数据价值的就地转化与智能决策，助力企业构建更敏捷、更智能、更高效的下一代工业控制系统，从容应对智能制造的未来挑战。
 
-### 外形尺寸
+## 外形尺寸
 
 产品外观结构与尺寸如下图：
 
-![image](EdgePLC BL234说明书V1.1-images/image6.png)
-![image](EdgePLC BL234说明书V1.1-images/image89.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image4.png"
+style="width:2.29236in;height:2.85556in"
+alt="F:/2025_9/EdgePLC/标签外壳/标准款清晰图片.png标准款清晰图片" /><img
+src="EdgePLC BL234说明书V1.1-images/image5.png"
+style="width:2.30972in;height:2.87986in"
+alt="F:/2025_9/EdgePLC/标签外壳/A款清晰图片.pngA款清晰图片" />
 
-### 技术参数
+## 技术参数
 
-| 分类 | 参数 | 描述 |
-|---|---|---|
-| 系统 | 型号 | T507-H |
-| 系统 | 处理器频率 | 1.416GHz |
-| 系统 | GPU | G31 MP2，支持OpenGL ES 1.0/2.0/3.2、Vulkan1.1、OpenCL 2.0 |
-| 系统 | 内存 | DDR4 1/2G |
-| 系统 | 存储 | eMMC 8/16G |
-| 电源 | 输入电压 | DC 12～24V （输入：24V,输出：12V） |
-| 电源 | 功耗 | 正常：240mA@12V（带4G模块），220mA@12V（不带4G模块） 最大：700mA@12V |
-| 电源 | 反接防护 | 支持 |
-| 网口 | 网口规格 | 2~3*RJ45，2~3x10/100M，自适应MDI/MDIX。 |
-| 网口 | 网口保护 | ESD ±2kV（接触），±8kV（空气）； |
-| SIM卡 | 数量 | 1 |
-| SIM卡 | 规格 | 抽屉式接口 |
-| 串口（选配） | 串口数量 | 2*RS485 |
-| 串口（选配） | 串口波特率 | 300bps-115200bps |
-| 串口（选配） | 数据位 | 7,8 |
-| 串口（选配） | 校验位 | None, Even, Odd |
-| 串口（选配） | 停止位 | 1, 2 |
-| N板数字输入（选配） | 数量 | 16/32通道 |
-| N板数字输入（选配） | 输入类型 | 支持干接点或湿接点 |
-| N板数字输入（选配） | 干接点 | 闭合：短接 断开：端开路 |
-| N板数字输入（选配） | 湿接点 | 逻辑0：0-VDC 逻辑1：-24VDC |
-| N板数字输入（选配） | 隔离保护 | 2KVrms |
-| N板数字输出（选配） | 数量 | 16/32通道 |
-| N板数字输出（选配） | 输出类型 | SINK |
-| N板数字输出（选配） | 输出容量 | 单路100mA |
-| USB接口 | 数量 | 2*USB 2.0 HOST |
-| SD卡座 | 数量 | 1 |
-| SD卡座 | 规格 | 支持SD、SDHC和SDXC（UHS-I）卡 |
-| HDMI接口 | 数量 | 1 |
-| 天线 | 天线接口数量 | 1*Wi-Fi/移动网天线，1*GPS天线 |
-| 天线 | 天线接口类型 | SMA孔式 |
-| 4G模块(选配功能) | L-E版本 | GSM/EDGE:900,1800MHz WCDMA:B1,B5,B8 FDD-LTE:B1,B3,B5,B7,B8,B20 TDD-LTE:B38,B40,B41 |
-| 4G模块(选配功能) | L-CE版本 | GSM/EDGE:900,1800MHz WCDMA:B1,B8 TD-SCDMA:B34,B39 FDD-LTE:B1,B3,B8 TDD-LTE:B38,B39,B40,B41 |
-| 4G模块(选配功能) | L-A版本 | WCDMA:B2,B4,B5 FDD-LTE:B2,B4,B12 |
-| 4G模块(选配功能) | L-AU版本 | GSM/EDGE:850,900,1800MHz WCDMA:B1,B2,B5,B8 FDD-LTE:B1,B3,B4,B5,B7,B8,B28 TDD-LTE:B40 |
-| 4G模块(选配功能) | L-AF版本 | WCDMA:B2,B4,B5 FDD-LTE:B2,B4,B5,B12,B13,B14,B66,B71 |
-| 4G模块(选配功能) | CAT-1版本 | GSM:900,1800 FDD-LTE:B1,B3,B5,B8 TDD-LTE:B34,B38,B39,B40,B41 |
-| 5G模块(选配功能) | redcap版本 | 5G NR：N1/N3/N5/N8/N28/N41/N78/N79 LTE-FDD：B1/B3/B5/B8 LTE-TD：B34/B38/B39/B40/B41 |
-| 5G模块(选配功能) | N-CN版本 | NR：N1/28/41/78/79 LTE：FDD B1/3/5/8 LTE：TDD B34/38/39/40/41 WCDMA：B1/8 |
-| Wi-Fi(选配功能) | 接口 | PCIE |
-| Wi-Fi(选配功能) | 协议 | IEEE 802.11b/g/n |
-| Wi-Fi(选配功能) | 模式 | STA，AP |
-| Wi-Fi(选配功能) | 频段 | 2.4GHz |
-| Wi-Fi(选配功能) | 通道数 | Ch1 ~ Ch13 |
-| Wi-Fi(选配功能) | 安全性 | Open、WPA、WPA2 |
-| Wi-Fi(选配功能) | 加密 | AES、TKIP、TKIPAES |
-| Wi-Fi(选配功能) | 连接数 | 8（Max） |
-| Wi-Fi(选配功能) | 速率 | 150Mbps（Max） |
-| Wi-Fi(选配功能) | SSID广播开关 | 支持 |
-| 指示灯 | 数量 | LED*3 |
-| 环境 | 工作温度、湿度 | -40～85℃/0~70℃，5～95% RH |
-| 环境 | 存储温度、湿度 | -40～85℃，5～95% RH |
-| 其他 | 外壳 | 铝合金外壳+不锈钢 |
-| 其他 | 尺寸 | 110*92*38mm |
-| 其他 | 防护等级 | IP30 |
-| 其他 | 安装方式 | DIN35导轨安装 |
-| 其他 | 系统 |  |
+<table style="width:100%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 19%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>分类</strong></td>
+<td style="text-align: center;"><strong>参数</strong></td>
+<td><strong>描述</strong></td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">系统</td>
+<td style="text-align: center;">型号</td>
+<td>T507-H</td>
+</tr>
+<tr>
+<td style="text-align: center;">处理器频率</td>
+<td>1.416GHz</td>
+</tr>
+<tr>
+<td style="text-align: center;">GPU</td>
+<td>G31 MP2，支持OpenGL ES 1.0/2.0/3.2、Vulkan1.1、OpenCL 2.0</td>
+</tr>
+<tr>
+<td style="text-align: center;">内存</td>
+<td>DDR4 1/2G</td>
+</tr>
+<tr>
+<td style="text-align: center;">存储</td>
+<td>eMMC 8/16G</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">电源</td>
+<td style="text-align: center;">输入电压</td>
+<td>DC 12～24V （输入：24V,输出：12V）</td>
+</tr>
+<tr>
+<td style="text-align: center;">功耗</td>
+<td><p>正常：240mA@12V（带4G模块），220mA@12V（不带4G模块）</p>
+<p>最大：700mA@12V</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">反接防护</td>
+<td>支持</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">网口</td>
+<td style="text-align: center;">网口规格</td>
+<td>2~3*RJ45，2~3x10/100M，自适应MDI/MDIX。</td>
+</tr>
+<tr>
+<td style="text-align: center;">网口保护</td>
+<td>ESD ±2kV（接触），±8kV（空气）；</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">SIM卡</td>
+<td style="text-align: center;">数量</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="text-align: center;">规格</td>
+<td>抽屉式接口</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">串口（选配）</td>
+<td style="text-align: center;">串口数量</td>
+<td>2*RS485</td>
+</tr>
+<tr>
+<td style="text-align: center;">串口波特率</td>
+<td>300bps-115200bps</td>
+</tr>
+<tr>
+<td style="text-align: center;">数据位</td>
+<td>7,8</td>
+</tr>
+<tr>
+<td style="text-align: center;">校验位</td>
+<td>None, Even, Odd</td>
+</tr>
+<tr>
+<td style="text-align: center;">停止位</td>
+<td>1, 2</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">N板数字输入（选配）</td>
+<td style="text-align: center;">数量</td>
+<td>16/32通道</td>
+</tr>
+<tr>
+<td style="text-align: center;">输入类型</td>
+<td>支持干接点或湿接点</td>
+</tr>
+<tr>
+<td style="text-align: center;">干接点</td>
+<td><p>闭合：短接</p>
+<p>断开：端开路</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">湿接点</td>
+<td><p>逻辑0：0-15VDC</p>
+<p>逻辑1：16-24VDC</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">隔离保护</td>
+<td>2KVrms</td>
+</tr>
+<tr>
+<td rowspan="3" style="text-align: center;">N板数字输出（选配）</td>
+<td style="text-align: center;">数量</td>
+<td>16/32通道</td>
+</tr>
+<tr>
+<td style="text-align: center;">输出类型</td>
+<td>SINK</td>
+</tr>
+<tr>
+<td style="text-align: center;">输出容量</td>
+<td>单路100mA</td>
+</tr>
+<tr>
+<td style="text-align: center;">USB接口</td>
+<td style="text-align: center;">数量</td>
+<td>2*USB 2.0 HOST</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">SD卡座</td>
+<td style="text-align: center;">数量</td>
+<td>1</td>
+</tr>
+<tr>
+<td style="text-align: center;">规格</td>
+<td>支持SD、SDHC和SDXC（UHS-I）卡</td>
+</tr>
+<tr>
+<td style="text-align: center;">HDMI接口</td>
+<td style="text-align: center;">数量</td>
+<td>1</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">天线</td>
+<td style="text-align: center;">天线接口数量</td>
+<td>1*Wi-Fi/移动网天线，1*GPS天线</td>
+</tr>
+<tr>
+<td style="text-align: center;">天线接口类型</td>
+<td>SMA孔式</td>
+</tr>
+<tr>
+<td rowspan="6" style="text-align: center;">4G模块(选配功能)</td>
+<td style="text-align: center;">L-E版本</td>
+<td><p>GSM/EDGE:900,1800MHz</p>
+<p>WCDMA:B1,B5,B8</p>
+<p>FDD-LTE:B1,B3,B5,B7,B8,B20</p>
+<p>TDD-LTE:B38,B40,B41</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">L-CE版本</td>
+<td><p>GSM/EDGE:900,1800MHz</p>
+<p>WCDMA:B1,B8</p>
+<p>TD-SCDMA:B34,B39</p>
+<p>FDD-LTE:B1,B3,B8</p>
+<p>TDD-LTE:B38,B39,B40,B41</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">L-A版本</td>
+<td><p>WCDMA:B2,B4,B5</p>
+<p>FDD-LTE:B2,B4,B12</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">L-AU版本</td>
+<td><p>GSM/EDGE:850,900,1800MHz</p>
+<p>WCDMA:B1,B2,B5,B8</p>
+<p>FDD-LTE:B1,B3,B4,B5,B7,B8,B28</p>
+<p>TDD-LTE:B40</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">L-AF版本</td>
+<td><p>WCDMA:B2,B4,B5</p>
+<p>FDD-LTE:B2,B4,B5,B12,B13,B14,B66,B71</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">CAT-1版本</td>
+<td><p>GSM:900,1800</p>
+<p>FDD-LTE:B1,B3,B5,B8</p>
+<p>TDD-LTE:B34,B38,B39,B40,B41</p></td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">5G模块(选配功能)</td>
+<td style="text-align: center;">redcap版本</td>
+<td><p>5G NR：N1/N3/N5/N8/N28/N41/N78/N79</p>
+<p>LTE-FDD：B1/B3/B5/B8</p>
+<p>LTE-TD：B34/B38/B39/B40/B41</p></td>
+</tr>
+<tr>
+<td style="text-align: center;">N-CN版本</td>
+<td><p>NR：N1/28/41/78/79</p>
+<p>LTE：FDD B1/3/5/8</p>
+<p>LTE：TDD B34/38/39/40/41</p>
+<p>WCDMA：B1/8</p></td>
+</tr>
+<tr>
+<td rowspan="10" style="text-align: center;">Wi-Fi(选配功能)</td>
+<td style="text-align: center;">接口</td>
+<td>PCIE</td>
+</tr>
+<tr>
+<td style="text-align: center;">协议</td>
+<td>IEEE 802.11b/g/n</td>
+</tr>
+<tr>
+<td style="text-align: center;">模式</td>
+<td>STA，AP</td>
+</tr>
+<tr>
+<td style="text-align: center;">频段</td>
+<td>2.4GHz</td>
+</tr>
+<tr>
+<td style="text-align: center;">通道数</td>
+<td>Ch1 ~ Ch13</td>
+</tr>
+<tr>
+<td style="text-align: center;">安全性</td>
+<td>Open、WPA、WPA2</td>
+</tr>
+<tr>
+<td style="text-align: center;">加密</td>
+<td>AES、TKIP、TKIPAES</td>
+</tr>
+<tr>
+<td style="text-align: center;">连接数</td>
+<td>8（Max）</td>
+</tr>
+<tr>
+<td style="text-align: center;">速率</td>
+<td>150Mbps（Max）</td>
+</tr>
+<tr>
+<td style="text-align: center;">SSID广播开关</td>
+<td>支持</td>
+</tr>
+<tr>
+<td style="text-align: center;">指示灯</td>
+<td style="text-align: center;">数量</td>
+<td>LED*3</td>
+</tr>
+<tr>
+<td rowspan="2" style="text-align: center;">环境</td>
+<td style="text-align: center;">工作温度、湿度</td>
+<td>-40～85℃/0~70℃，5～95% RH</td>
+</tr>
+<tr>
+<td style="text-align: center;">存储温度、湿度</td>
+<td>-40～85℃，5～95% RH</td>
+</tr>
+<tr>
+<td rowspan="5" style="text-align: center;">其他</td>
+<td style="text-align: center;">外壳</td>
+<td>铝合金外壳+不锈钢</td>
+</tr>
+<tr>
+<td style="text-align: center;">尺寸</td>
+<td>110*92*38mm</td>
+</tr>
+<tr>
+<td style="text-align: center;">防护等级</td>
+<td>IP30</td>
+</tr>
+<tr>
+<td style="text-align: center;">安装方式</td>
+<td>DIN35导轨安装</td>
+</tr>
+<tr>
+<td style="text-align: center;">系统</td>
+<td>Ubuntu20.04（Linux-4.9.170、Linux-RT-4.9.170）</td>
+</tr>
+</tbody>
+</table>
 
-### 设备选型
+## 设备选型
 
-#### 主型号选型
+### 主型号选型
 
-| 型号 | ETH | USB | HDMI | N板IO槽 | 尺寸 |
-|---|---|---|---|---|---|
-| BL234 | 2x100M | 2 | 0 | 1 | 38x92x110mm |
-| BL234A | 3x100M | 2 | 1 | 1 | 38x92x110mm |
+|            |            |         |          |             |                 |
+|:----------:|:----------:|:-------:|:--------:|:-----------:|:---------------:|
+|  **型号**  |  **ETH**   | **USB** | **HDMI** | **N板IO槽** |    **尺寸**     |
+| **BL234**  | **2x100M** |  **2**  |  **0**   |    **1**    | **38x92x110mm** |
+| **BL234A** | **3x100M** |  **2**  |  **1**   |    **1**    | **38x92x110mm** |
 
-BL234系列选型
+**BL234系列选型**
 
-#### SOM选型表
+### SOM选型表 
 
 可以根据需求，选择合适的ROM、RAM以及温度等级。
 
-| BL234系列SOM选型表 | BL234系列SOM选型表 | BL234系列SOM选型表 | BL234系列SOM选型表 | BL234系列SOM选型表 | BL234系列SOM选型表 | BL234系列SOM选型表 |
-|---|---|---|---|---|---|---|
-| 型号 | MCU | 主频 | 内核 | eMMC | DDR4 | 温度级别 |
-| SOM340 | T507-H | 1.4GHz | 4 x A53 | 8GByte | 1GByte | 工业级-40~85℃ |
-| SOM341 | T507-H | 1.4GHz | 4 x A53 | 16GByte | 2GByte | 工业级-40~85℃ |
-| SOM342 | T507-H | 1.4GHz | 4 x A53 | 8GByte | 1GByte | 商业级0~70℃ |
-| SOM343 | T507-H | 1.4GHz | 4 x A53 | 16GByte | 2GByte | 商业级0~70℃ |
+<table>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 24%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="7"
+style="text-align: center;"><strong>BL234系列SOM选型表</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>型号</strong></td>
+<td style="text-align: center;"><strong>MCU</strong></td>
+<td style="text-align: center;"><strong>主频</strong></td>
+<td style="text-align: center;"><strong>内核</strong></td>
+<td style="text-align: center;"><strong>eMMC</strong></td>
+<td style="text-align: center;"><strong>DDR4</strong></td>
+<td style="text-align: center;"><strong>温度级别</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">SOM340</td>
+<td style="text-align: center;">T507-H</td>
+<td style="text-align: center;">1.4GHz</td>
+<td style="text-align: center;">4 x A53</td>
+<td style="text-align: center;">8GByte</td>
+<td style="text-align: center;">1GByte</td>
+<td style="text-align: center;">工业级-40~85℃</td>
+</tr>
+<tr>
+<td style="text-align: center;">SOM341</td>
+<td style="text-align: center;">T507-H</td>
+<td style="text-align: center;">1.4GHz</td>
+<td style="text-align: center;">4 x A53</td>
+<td style="text-align: center;">16GByte</td>
+<td style="text-align: center;">2GByte</td>
+<td style="text-align: center;">工业级-40~85℃</td>
+</tr>
+<tr>
+<td style="text-align: center;">SOM342</td>
+<td style="text-align: center;">T507-H</td>
+<td style="text-align: center;">1.4GHz</td>
+<td style="text-align: center;">4 x A53</td>
+<td style="text-align: center;">8GByte</td>
+<td style="text-align: center;">1GByte</td>
+<td style="text-align: center;">商业级0~70℃</td>
+</tr>
+<tr>
+<td style="text-align: center;">SOM343</td>
+<td style="text-align: center;">T507-H</td>
+<td style="text-align: center;">1.4GHz</td>
+<td style="text-align: center;">4 x A53</td>
+<td style="text-align: center;">16GByte</td>
+<td style="text-align: center;">2GByte</td>
+<td style="text-align: center;">商业级0~70℃</td>
+</tr>
+</tbody>
+</table>
 
-#### X系列板选型
+### X系列板选型
 
 可以根据需求，选择合适的X系列IO板，X系列IO板的PIN数要与外壳适配。
 
-注意：本设备默认端口为RS485，如需RS232请向销售说明。
+<table>
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 14%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 17%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="7"
+style="text-align: left;">注意：本设备默认端口为RS485，如需RS232请向销售说明。
+<strong>X系列IO板选型表</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>型号</strong></td>
+<td style="text-align: center;"><strong>RS232/RS485</strong></td>
+<td style="text-align: center;"><strong>CAN</strong></td>
+<td style="text-align: center;"><strong>DI</strong></td>
+<td style="text-align: center;"><strong>DO</strong></td>
+<td style="text-align: center;"><strong>GPIO</strong></td>
+<td style="text-align: center;"><strong>GND</strong></td>
+<td style="text-align: center;"><strong>PIN数</strong></td>
+<td style="text-align: center;"><strong>备注</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">X90</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6PIN</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">X91</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">×</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">6PIN</td>
+<td style="text-align: center;">BL234不支持</td>
+</tr>
+</tbody>
+</table>
 
-| X系列IO板选型表 | X系列IO板选型表 | X系列IO板选型表 | X系列IO板选型表 | X系列IO板选型表 | X系列IO板选型表 | X系列IO板选型表 |  |  |
-|---|---|---|---|---|---|---|---|---|
-| 型号 | RS232/RS485 | CAN | DI | DO | GPIO | GND | PIN数 | 备注 |
-| X90 | 2 | × | × | × | × | 2 | 6PIN |  |
-| X91 | 1 | 1 | × | × | × | 2 | 6PIN | BL234不支持 |
+### N系列IO板选型
 
-#### N系列IO板选型
+16路以下尺寸：15.4x104.6x74.9mm，32路尺寸：28.4x104.6x74.9mm
 
-N系列IO板选型表
+**N系列IO板选型表**
 
-| 型号 | 描述 |  | 型号 | 描述 |
-|---|---|---|---|---|
-| N1161 | 16路DI模块NPN |  | N3046 | 4路16位AI模块差分输入±5V/±10V |
-| N1162 | 16路DI模块PNP |  |  |  |
-| N1163 | 16路干节点DI模块 |  |  |  |
-| N1321 | 32路DI模块NPN |  |  |  |
-| N1322 | 32路DI模块PNP |  |  |  |
-| N1323 | 32路干节点DI模块 |  |  |  |
-| N2161 | 16路DO模块PNP |  |  |  |
-| N2162 | 16路DO模块NPN |  |  |  |
-| N2321 | 32路DO模块PNP |  |  |  |
-| N2322 | 32路DO模块NPN |  |  |  |
-| N2084 | 8路DO模块继电器 |  |  |  |
-| N3081 | 8路16位AI模块单端输入0/4~20mA |  |  |  |
-| N3083 | 8路16位AI模块单端输入0~5/10V |  |  |  |
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 38%" />
+<col style="width: 2%" />
+<col style="width: 8%" />
+<col style="width: 42%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>型号</strong></td>
+<td style="text-align: center;"><strong>描述</strong></td>
+<td rowspan="12" style="text-align: center;"></td>
+<td style="text-align: center;"><strong>型号</strong></td>
+<td style="text-align: center;"><strong>描述</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">N1161</td>
+<td style="text-align: center;">16路DI模块NPN</td>
+<td style="text-align: center;">N3046</td>
+<td style="text-align: center;">4路16位AI模块差分输入±5V/±10V</td>
+</tr>
+<tr>
+<td style="text-align: center;">N1162</td>
+<td style="text-align: center;">16路DI模块PNP</td>
+<td style="text-align: center;">N3087</td>
+<td style="text-align: center;">8路电阻测量模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">N1163</td>
+<td style="text-align: center;">16路干节点DI模块</td>
+<td style="text-align: center;">N4081</td>
+<td style="text-align: center;">8路16位AO模块输出0/4~20mA</td>
+</tr>
+<tr>
+<td style="text-align: center;">N1321</td>
+<td style="text-align: center;">32路DI模块NPN</td>
+<td style="text-align: center;">N4086</td>
+<td style="text-align: center;">8路16位AO模块输出±5V/±10V</td>
+</tr>
+<tr>
+<td style="text-align: center;">N1322</td>
+<td style="text-align: center;">32路DI模块PNP</td>
+<td style="text-align: center;">N5041</td>
+<td style="text-align: center;">4路RTD模块三线PT100</td>
+</tr>
+<tr>
+<td style="text-align: center;">N1323</td>
+<td style="text-align: center;">32路干节点DI模块</td>
+<td style="text-align: center;">N5042</td>
+<td style="text-align: center;">4路RTD模块三线PT1000</td>
+</tr>
+<tr>
+<td style="text-align: center;">N2161</td>
+<td style="text-align: center;">16路DO模块PNP</td>
+<td style="text-align: center;">N5043</td>
+<td style="text-align: center;">4路RTD模块四线PT100</td>
+</tr>
+<tr>
+<td style="text-align: center;">N2162</td>
+<td style="text-align: center;">16路DO模块NPN</td>
+<td style="text-align: center;">N5044</td>
+<td style="text-align: center;">4路RTD模块四线PT1000</td>
+</tr>
+<tr>
+<td style="text-align: center;">N2321</td>
+<td style="text-align: center;">32路DO模块PNP</td>
+<td style="text-align: center;">N5088</td>
+<td style="text-align: center;">8路TC模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">N2322</td>
+<td style="text-align: center;">32路DO模块NPN</td>
+<td style="text-align: center;">N7011</td>
+<td style="text-align: center;">中继电源模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">N2084</td>
+<td style="text-align: center;">8路DO模块继电器</td>
+<td style="text-align: center;">N9081</td>
+<td style="text-align: center;">3路脉冲计数+5DI</td>
+</tr>
+<tr>
+<td style="text-align: center;">N3081</td>
+<td style="text-align: center;">8路16位AI模块单端输入0/4~20mA</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">N9082</td>
+<td style="text-align: center;">6路脉冲输出+2DO</td>
+</tr>
+<tr>
+<td style="text-align: center;">N3083</td>
+<td style="text-align: center;">8路16位AI模块单端输入0~5/10V</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">N9083</td>
+<td style="text-align: center;">2路脉冲输出（脉冲个数控制）+4DI+2DO</td>
+</tr>
+</tbody>
+</table>
 
-## 硬件说明
+# 硬件说明
 
-### N板介绍
+## N板介绍
 
-![image](EdgePLC BL234说明书V1.1-images/image88.png)
-![image](EdgePLC BL234说明书V1.1-images/image87.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image6.png"
+style="width:3.14375in;height:1.87847in" alt="EdgePLC A款 (10)" /><img
+src="EdgePLC BL234说明书V1.1-images/image7.png"
+style="width:2.56042in;height:2.56042in" />
 
 工业自动化控制系统中常见的分布式I/O模块，例如：右侧具体为32通道数字量输入模块，型号为N1321(NPN)。这类模块通常用于连接现场的传感器、按钮、限位开关等设备，将物理信号转换为PLC（可编程逻辑控制器）可识别的数字信号。
 
@@ -176,7 +619,7 @@ N系列IO板选型表
 
 模块顶部有一个橙色的卡扣，用于将模块固定在DIN导轨上，便于安装和拆卸。
 
-接线端子
+**接线端子**
 
 模块底部排列着多组橙色的弹簧式接线端子，用于连接外部设备的信号线。
 
@@ -184,17 +627,17 @@ N系列IO板选型表
 
 弹簧式端子设计使得接线无需工具，操作便捷，且连接可靠。
 
-连接端子
+**连接端子**
 
 模块化I/O系统内部通信和供电的背板总线连接器，它通常由一排精密的金属插针和插座组成，负责在相邻模块之间传递电源、数据和控制信号。
 
-散热与结构设计
+**散热与结构设计**
 
 模块外壳采用白色工程塑料，表面有散热格栅设计，有助于在高密度安装或高温环境下散热。
 
 整体结构紧凑，符合工业标准尺寸，可与其他模块组合使用，形成分布式I/O系统。
 
-应用场景与优势
+**应用场景与优势**
 
 分布式控制：该模块通常与主PLC控制器通过现场总线（如EtherCAT、PROFINET等）连接，实现远程I/O扩展，减少布线成本，提高系统灵活性。
 
@@ -202,203 +645,1229 @@ N系列IO板选型表
 
 NPN输入特性：适用于连接NPN型传感器，这类传感器在工业现场应用广泛，具有抗干扰能力强、成本较低等优点。
 
-### 电源接口
+## 电源接口
 
-。
-![image](EdgePLC BL234说明书V1.1-images/image86.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image8.png"
+style="width:2.57639in;height:1.04931in"
+alt="e2c8802fdadeb1e5530381aefa943291_origin(1)" />。
 
 设备提供1路输入。支持DC12~24V输入，支持反接防护
 
-### 模块端口说明
+## 模块端口说明
 
 根据不同的X/N板，有不同的串口可选择。目前可选板型如下。
 
 注：X板ttyS0同时为调试串口。
 
-#### RS232/485模块
+### RS232/485模块
 
-| X90模块（2个RS485） | X90模块（2个RS485） | X90模块（2个RS485） | X90模块（2个RS485） | X90模块（2个RS485） | X90模块（2个RS485） | X90模块（2个RS485） |
-|---|---|---|---|---|---|---|
-| 端口号 | 1 | 2 | 3 | 4 | 5 | 6 |
-| 名称 | ttyS1-A | ttyS1-B | GND | ttyS0-A | ttyS0-B | GND |
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="7" style="text-align: center;">X90模块（2个RS485）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">ttyS1-A</td>
+<td style="text-align: center;">ttyS1-B</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">ttyS0-A</td>
+<td style="text-align: center;">ttyS0-B</td>
+<td style="text-align: center;">GND</td>
+</tr>
+</tbody>
+</table>
 
-#### DI模块
+### DI模块
 
 注意：DI模块默认供电24V
 
-| N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 | N1161/N1162/N1163模块 |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DI2 | DI4 | DI6 | DI8 | DI10 | DI12 | DI14 | DI16 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DI1 | DI3 | DI5 | DI7 | DI9 | DI11 | DI13 | DI15 | COM |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N1161/N1162/N1163模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI2</td>
+<td style="text-align: center;">DI4</td>
+<td style="text-align: center;">DI6</td>
+<td style="text-align: center;">DI8</td>
+<td style="text-align: center;">DI10</td>
+<td style="text-align: center;">DI12</td>
+<td style="text-align: center;">DI14</td>
+<td style="text-align: center;">DI16</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI1</td>
+<td style="text-align: center;">DI3</td>
+<td style="text-align: center;">DI5</td>
+<td style="text-align: center;">DI7</td>
+<td style="text-align: center;">DI9</td>
+<td style="text-align: center;">DI11</td>
+<td style="text-align: center;">DI13</td>
+<td style="text-align: center;">DI15</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-| N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 | N1321/N1322/N1323模块 |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DI17 | DI19 | DI21 | DI23 | DI25 | DI27 | DI29 | DI31 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DI16 | DI18 | DI20 | DI22 | DI24 | DI26 | DI28 | DI30 | COM |
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DI1 | DI3 | DI5 | DI7 | DI9 | DI11 | DI13 | DI15 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DI0 | DI2 | DI4 | DI6 | DI8 | DI10 | DI12 | DI14 | COM |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N1321/N1322/N1323模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI17</td>
+<td style="text-align: center;">DI19</td>
+<td style="text-align: center;">DI21</td>
+<td style="text-align: center;">DI23</td>
+<td style="text-align: center;">DI25</td>
+<td style="text-align: center;">DI27</td>
+<td style="text-align: center;">DI29</td>
+<td style="text-align: center;">DI31</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI16</td>
+<td style="text-align: center;">DI18</td>
+<td style="text-align: center;">DI20</td>
+<td style="text-align: center;">DI22</td>
+<td style="text-align: center;">DI24</td>
+<td style="text-align: center;">DI26</td>
+<td style="text-align: center;">DI28</td>
+<td style="text-align: center;">DI30</td>
+<td style="text-align: center;">COM</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI1</td>
+<td style="text-align: center;">DI3</td>
+<td style="text-align: center;">DI5</td>
+<td style="text-align: center;">DI7</td>
+<td style="text-align: center;">DI9</td>
+<td style="text-align: center;">DI11</td>
+<td style="text-align: center;">DI13</td>
+<td style="text-align: center;">DI15</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DI0</td>
+<td style="text-align: center;">DI2</td>
+<td style="text-align: center;">DI4</td>
+<td style="text-align: center;">DI6</td>
+<td style="text-align: center;">DI8</td>
+<td style="text-align: center;">DI10</td>
+<td style="text-align: center;">DI12</td>
+<td style="text-align: center;">DI14</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-注意：上述两个DI模块采用共板形式，分别对应NPN型、PNP型、干接点
+注意：上述两个DI模块采用共板形式，分别对应NPN型、PNP型、干接点12V供电，湿接点外接电源大于12V即可。
 
-#### DO模块
+### DO模块
 
-| N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） | N2161模块（PNP） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO2 | DO4 | DO6 | DO8 | DO10 | DO12 | DO14 | DO16 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO1 | DO3 | DO5 | DO7 | DO9 | DO11 | DO13 | DO15 | COM |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N2161模块（PNP）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO2</td>
+<td style="text-align: center;">DO4</td>
+<td style="text-align: center;">DO6</td>
+<td style="text-align: center;">DO8</td>
+<td style="text-align: center;">DO10</td>
+<td style="text-align: center;">DO12</td>
+<td style="text-align: center;">DO14</td>
+<td style="text-align: center;">DO16</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO1</td>
+<td style="text-align: center;">DO3</td>
+<td style="text-align: center;">DO5</td>
+<td style="text-align: center;">DO7</td>
+<td style="text-align: center;">DO9</td>
+<td style="text-align: center;">DO11</td>
+<td style="text-align: center;">DO13</td>
+<td style="text-align: center;">DO15</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-| N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） | N2162模块（NPN） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO2 | DO4 | DO6 | DO8 | DO10 | DO12 | DO14 | DO16 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO1 | DO3 | DO5 | DO7 | DO9 | DO11 | DO13 | DO15 | COM |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N2162模块（NPN）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO2</td>
+<td style="text-align: center;">DO4</td>
+<td style="text-align: center;">DO6</td>
+<td style="text-align: center;">DO8</td>
+<td style="text-align: center;">DO10</td>
+<td style="text-align: center;">DO12</td>
+<td style="text-align: center;">DO14</td>
+<td style="text-align: center;">DO16</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO1</td>
+<td style="text-align: center;">DO3</td>
+<td style="text-align: center;">DO5</td>
+<td style="text-align: center;">DO7</td>
+<td style="text-align: center;">DO9</td>
+<td style="text-align: center;">DO11</td>
+<td style="text-align: center;">DO13</td>
+<td style="text-align: center;">DO15</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-| N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） | N2321模块（PNP）（默认内部供电24V） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO17 | DO19 | DO21 | DO23 | DO25 | DO27 | DO29 | DO31 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO16 | DO18 | DO20 | DO22 | DO24 | DO26 | DO28 | DO30 | COM |
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO1 | DO3 | DO5 | DO7 | DO9 | DO11 | DO13 | DO15 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO0 | DO2 | DO4 | DO6 | DO8 | DO10 | DO12 | DO14 | COM |
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10"
+style="text-align: center;">N2321模块（PNP）（默认内部供电24V）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO17</td>
+<td style="text-align: center;">DO19</td>
+<td style="text-align: center;">DO21</td>
+<td style="text-align: center;">DO23</td>
+<td style="text-align: center;">DO25</td>
+<td style="text-align: center;">DO27</td>
+<td style="text-align: center;">DO29</td>
+<td style="text-align: center;">DO31</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO16</td>
+<td style="text-align: center;">DO18</td>
+<td style="text-align: center;">DO20</td>
+<td style="text-align: center;">DO22</td>
+<td style="text-align: center;">DO24</td>
+<td style="text-align: center;">DO26</td>
+<td style="text-align: center;">DO28</td>
+<td style="text-align: center;">DO30</td>
+<td style="text-align: center;">COM</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO1</td>
+<td style="text-align: center;">DO3</td>
+<td style="text-align: center;">DO5</td>
+<td style="text-align: center;">DO7</td>
+<td style="text-align: center;">DO9</td>
+<td style="text-align: center;">DO11</td>
+<td style="text-align: center;">DO13</td>
+<td style="text-align: center;">DO15</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO0</td>
+<td style="text-align: center;">DO2</td>
+<td style="text-align: center;">DO4</td>
+<td style="text-align: center;">DO6</td>
+<td style="text-align: center;">DO8</td>
+<td style="text-align: center;">DO10</td>
+<td style="text-align: center;">DO12</td>
+<td style="text-align: center;">DO14</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-| N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） | N2322模块（NPN） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO17 | DO19 | DO21 | DO23 | DO25 | DO27 | DO29 | DO31 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO16 | DO18 | DO20 | DO22 | DO24 | DO26 | DO28 | DO30 | COM |
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | DO1 | DO3 | DO5 | DO7 | DO9 | DO11 | DO13 | DO15 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | DO0 | DO2 | DO4 | DO6 | DO8 | DO10 | DO12 | DO14 | COM |
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N2322模块（NPN）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO17</td>
+<td style="text-align: center;">DO19</td>
+<td style="text-align: center;">DO21</td>
+<td style="text-align: center;">DO23</td>
+<td style="text-align: center;">DO25</td>
+<td style="text-align: center;">DO27</td>
+<td style="text-align: center;">DO29</td>
+<td style="text-align: center;">DO31</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO16</td>
+<td style="text-align: center;">DO18</td>
+<td style="text-align: center;">DO20</td>
+<td style="text-align: center;">DO22</td>
+<td style="text-align: center;">DO24</td>
+<td style="text-align: center;">DO26</td>
+<td style="text-align: center;">DO28</td>
+<td style="text-align: center;">DO30</td>
+<td style="text-align: center;">COM</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO1</td>
+<td style="text-align: center;">DO3</td>
+<td style="text-align: center;">DO5</td>
+<td style="text-align: center;">DO7</td>
+<td style="text-align: center;">DO9</td>
+<td style="text-align: center;">DO11</td>
+<td style="text-align: center;">DO13</td>
+<td style="text-align: center;">DO15</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">DO0</td>
+<td style="text-align: center;">DO2</td>
+<td style="text-align: center;">DO4</td>
+<td style="text-align: center;">DO6</td>
+<td style="text-align: center;">DO8</td>
+<td style="text-align: center;">DO10</td>
+<td style="text-align: center;">DO12</td>
+<td style="text-align: center;">DO14</td>
+<td style="text-align: center;">COM</td>
+</tr>
+</tbody>
+</table>
 
-| N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） | N2084模块（继电器） |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B1 | B2 | B3 | B4 | B5 | B5 | B6 | B6 | B7 | B7 | B8 | B9 |
-| 名称 | SW1 | SW1 | SW2 | SW3 | SW4 | SW5 | SW6 | SW6 | SW7 | SW7 | SW8 | SW8 | PE |
-| 端口号 | A1 | A1 | A2 | A3 | A4 | A5 | A5 | A6 | A6 | A7 | A7 | A8 | A9 |
-| 名称 | SW1 | SW2 | SW2 | SW3 | SW4 | SW5 | SW5 | SW6 | SW6 | SW7 | SW7 | SW8 | PE |
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 10%" />
+<col style="width: 0%" />
+<col style="width: 7%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 0%" />
+<col style="width: 9%" />
+<col style="width: 0%" />
+<col style="width: 9%" />
+<col style="width: 0%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="14" style="text-align: center;">N2084模块（继电器）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td colspan="2" style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td colspan="2" style="text-align: center;">B5</td>
+<td colspan="2" style="text-align: center;">B6</td>
+<td colspan="2" style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td colspan="2" style="text-align: center;">SW1</td>
+<td style="text-align: center;">SW2</td>
+<td style="text-align: center;">SW3</td>
+<td style="text-align: center;">SW4</td>
+<td style="text-align: center;">SW5</td>
+<td colspan="2" style="text-align: center;">SW6</td>
+<td colspan="2" style="text-align: center;">SW7</td>
+<td colspan="2" style="text-align: center;">SW8</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td colspan="2" style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td colspan="2" style="text-align: center;">A5</td>
+<td colspan="2" style="text-align: center;">A6</td>
+<td colspan="2" style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">SW1</td>
+<td colspan="2" style="text-align: center;">SW2</td>
+<td style="text-align: center;">SW3</td>
+<td style="text-align: center;">SW4</td>
+<td colspan="2" style="text-align: center;">SW5</td>
+<td colspan="2" style="text-align: center;">SW6</td>
+<td colspan="2" style="text-align: center;">SW7</td>
+<td style="text-align: center;">SW8</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-#### AO模块
+### AO模块
 
-| N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） | N4081模块（0/4~20mA） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | A1+ | A2+ | A3+ | A4+ | A5+ | A6+ | A7+ | A8+ | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | A1- | A2- | A3- | A4- | A5- | A6- | A7- | A8- | PE |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10"
+style="text-align: center;">N4081模块（0/4~20mA）（±0.1误差）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">A1+</td>
+<td style="text-align: center;">A2+</td>
+<td style="text-align: center;">A3+</td>
+<td style="text-align: center;">A4+</td>
+<td style="text-align: center;">A5+</td>
+<td style="text-align: center;">A6+</td>
+<td style="text-align: center;">A7+</td>
+<td style="text-align: center;">A8+</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">A1-</td>
+<td style="text-align: center;">A2-</td>
+<td style="text-align: center;">A3-</td>
+<td style="text-align: center;">A4-</td>
+<td style="text-align: center;">A5-</td>
+<td style="text-align: center;">A6-</td>
+<td style="text-align: center;">A7-</td>
+<td style="text-align: center;">A8-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-| N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） | N4086模块（±5V/±10V） |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | AO1 | AO2 | AO3 | AO4 | AO5 | AO6 | AO7 | AO8 | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | GND | GND | GND | GND | GND | GND | GND | GND | PE |
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10"
+style="text-align: center;">N4086模块（±5V/±10V）（±0.1误差）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">AO1</td>
+<td style="text-align: center;">AO2</td>
+<td style="text-align: center;">AO3</td>
+<td style="text-align: center;">AO4</td>
+<td style="text-align: center;">AO5</td>
+<td style="text-align: center;">AO6</td>
+<td style="text-align: center;">AO7</td>
+<td style="text-align: center;">AO8</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-#### AI模块
+注意：采用 24V DC 直流电源供电。
 
-| N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 | N3081/N3083模块 |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | AI1- | AI2- | AI3- | AI4- | AI5- | AI6- | AI7- | AI8- | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | AI1+ | AI2+ | AI3+ | AI4+ | AI5+ | AI6+ | AI7+ | AI8+ | PE |
+### AI模块
 
-注意：上述AI模块采用共板形式，分别对应单端0/4~20mA、单端输入0~5V/10V
+<table>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10"
+style="text-align: center;">N3081/N3083模块（±0.1误差）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">AI1-</td>
+<td style="text-align: center;">AI2-</td>
+<td style="text-align: center;">AI3-</td>
+<td style="text-align: center;">AI4-</td>
+<td style="text-align: center;">AI5-</td>
+<td style="text-align: center;">AI6-</td>
+<td style="text-align: center;">AI7-</td>
+<td style="text-align: center;">AI8-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">AI1+</td>
+<td style="text-align: center;">AI2+</td>
+<td style="text-align: center;">AI3+</td>
+<td style="text-align: center;">AI4+</td>
+<td style="text-align: center;">AI5+</td>
+<td style="text-align: center;">AI6+</td>
+<td style="text-align: center;">AI7+</td>
+<td style="text-align: center;">AI8+</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-| N3046模块（±5V/±10V） | N3046模块（±5V/±10V） | N3046模块（±5V/±10V） | N3046模块（±5V/±10V） | N3046模块（±5V/±10V） | N3046模块（±5V/±10V） |
-|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B9 |
-| 名称 | AI1- | AI2- | AI3- | AI4- | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A9 |
-| 名称 | AI1+ | AI2+ | AI3+ | AI4+ | PE |
+注意：上述AI模块采用共板形式，分别对应单端0/4~20mA、单端输入0~5V/10V，采用
+24V DC 直流电源供电。
 
-#### RTD模块
+<table>
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="6" style="text-align: center;">N3046模块（±5V/±10V）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">AI1-</td>
+<td style="text-align: center;">AI2-</td>
+<td style="text-align: center;">AI3-</td>
+<td style="text-align: center;">AI4-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">AI1+</td>
+<td style="text-align: center;">AI2+</td>
+<td style="text-align: center;">AI3+</td>
+<td style="text-align: center;">AI4+</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-| N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 | N5041/N5042/N5043/N5044模块 |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | RTD1+ | 1+ | 1- | RTD1- | RTD3+ | 3+ | 3- | RTD3- | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | RTD2+ | 2+ | 2- | RTD2- | RTD4+ | 4+ | 4- | RTD4- | PE |
+### RTD模块
+
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10"
+style="text-align: center;">N5041/N5042/N5043/N5044模块（±0.5误差）</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">RTD1+</td>
+<td style="text-align: center;">1+</td>
+<td style="text-align: center;">1-</td>
+<td style="text-align: center;">RTD1-</td>
+<td style="text-align: center;">RTD3+</td>
+<td style="text-align: center;">3+</td>
+<td style="text-align: center;">3-</td>
+<td style="text-align: center;">RTD3-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">RTD2+</td>
+<td style="text-align: center;">2+</td>
+<td style="text-align: center;">2-</td>
+<td style="text-align: center;">RTD2-</td>
+<td style="text-align: center;">RTD4+</td>
+<td style="text-align: center;">4+</td>
+<td style="text-align: center;">4-</td>
+<td style="text-align: center;">RTD4-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
 注意：上述RTD模块采用共板形式，分别对应三线PT100电阻、三线PT1000电阻、四线PT100电阻、四线PT1000电阻。
 
-#### TC模块
+### TC模块
 
-| N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 | N5088模块 |
-|---|---|---|---|---|---|---|---|---|---|
-| 端口号 | B1 | B2 | B3 | B4 | B5 | B6 | B7 | B8 | B9 |
-| 名称 | T1+ | T2+ | T3+ | T4+ | T5+ | T6+ | T7+ | T8+ | PE |
-| 端口号 | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 |
-| 名称 | T1- | T2- | T3- | T4- | T5- | T6- | T7- | T8- | PE |
+<table>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N5088模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">T1+</td>
+<td style="text-align: center;">T2+</td>
+<td style="text-align: center;">T3+</td>
+<td style="text-align: center;">T4+</td>
+<td style="text-align: center;">T5+</td>
+<td style="text-align: center;">T6+</td>
+<td style="text-align: center;">T7+</td>
+<td style="text-align: center;">T8+</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">T1-</td>
+<td style="text-align: center;">T2-</td>
+<td style="text-align: center;">T3-</td>
+<td style="text-align: center;">T4-</td>
+<td style="text-align: center;">T5-</td>
+<td style="text-align: center;">T6-</td>
+<td style="text-align: center;">T7-</td>
+<td style="text-align: center;">T8-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
 
-|  |  |  |  |  |  |  |  |  |  |
-|---|---|---|---|---|---|---|---|---|---|
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
-|  |  |  |  |  |  |  |  |  |  |
+### NTC模块
 
-#### X板端口使用
+<table style="width:100%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 6%" />
+</colgroup>
+<tbody>
+<tr>
+<td colspan="10" style="text-align: center;">N3087模块</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">B1</td>
+<td style="text-align: center;">B2</td>
+<td style="text-align: center;">B3</td>
+<td style="text-align: center;">B4</td>
+<td style="text-align: center;">B5</td>
+<td style="text-align: center;">B6</td>
+<td style="text-align: center;">B7</td>
+<td style="text-align: center;">B8</td>
+<td style="text-align: center;">B9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">NTC1-</td>
+<td style="text-align: center;">NTC2-</td>
+<td style="text-align: center;">NTC3-</td>
+<td style="text-align: center;">NTC4-</td>
+<td style="text-align: center;">NTC5-</td>
+<td style="text-align: center;">NTC6-</td>
+<td style="text-align: center;">NTC7-</td>
+<td style="text-align: center;">NTC8-</td>
+<td style="text-align: center;">PE</td>
+</tr>
+<tr>
+<td style="text-align: center;">端口号</td>
+<td style="text-align: center;">A1</td>
+<td style="text-align: center;">A2</td>
+<td style="text-align: center;">A3</td>
+<td style="text-align: center;">A4</td>
+<td style="text-align: center;">A5</td>
+<td style="text-align: center;">A6</td>
+<td style="text-align: center;">A7</td>
+<td style="text-align: center;">A8</td>
+<td style="text-align: center;">A9</td>
+</tr>
+<tr>
+<td style="text-align: center;">名称</td>
+<td style="text-align: center;">NTC1+</td>
+<td style="text-align: center;">NTC2+</td>
+<td style="text-align: center;">NTC3+</td>
+<td style="text-align: center;">NTC4+</td>
+<td style="text-align: center;">NTC5+</td>
+<td style="text-align: center;">NTC6+</td>
+<td style="text-align: center;">NTC7+</td>
+<td style="text-align: center;">NTC8+</td>
+<td style="text-align: center;">PE</td>
+</tr>
+</tbody>
+</table>
+
+### X板端口使用
 
 以X90为例，6PIN端口：
 
 RS232/485传输
 
-使用RS232/485串口时，将RS232/485线接至端口上（ttl转485），打开sscom5和mobaxterm对接收发，如RS485-1端口（x90模块），其设备文件为/dev/ttyS1；设置其波特率设为 115200，8N1，无校验位。
+使用RS232/485串口时，将RS232/485线接至端口上（ttl转485），打开sscom5和mobaxterm对接收发，如RS485-1端口（x90模块），其设备文件为/dev/ttyS1；设置其波特率设为
+115200，8N1，无校验位。
 
 stty -F /dev/ttyS1 ispeed 115200 ospeed 115200 cs8
 
-echo 12345 > /dev/ttyS1 //通过RS485-1端口发送数据
+echo 12345 /> /dev/ttyS1 //通过RS485-1端口发送数据
 
 cat /dev/ttyS1 //等待查看接收到的数据
 
 串口助手收到数据
 
-![image](EdgePLC BL234说明书V1.1-images/image85.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image9.png"
+style="width:5.77153in;height:0.22708in" />
 
 串口助手发送数据
 
-![image](EdgePLC BL234说明书V1.1-images/image84.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image10.png"
+style="width:5.77153in;height:0.52986in" />
 
 终端界面收到数据
 
-![image](EdgePLC BL234说明书V1.1-images/image83.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image11.png"
+style="width:5.78125in;height:0.45208in" />
 
 按“Ctrl+C”停止。
 
 然后更换x90另外一个ttyS0口继续测试。
 
-#### N板端口使用
+### N板端口使用
 
-软件安装
+1)  **软件安装**
 
-对应文件位置位于/ion文件夹下。实际目录请以文件为准。
+对应文件位置位于**/ion**文件夹下。实际目录请以文件为准。
 
 插上网线写入ifconfig指令获取IP，通过SSH登录
 
-![image](EdgePLC BL234说明书V1.1-images/image82.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image12.png"
+style="width:5.7625in;height:1.13333in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image81.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image13.png"
+style="width:5.76806in;height:3.82361in" />
 
 通过左边文件夹页面在usr/demo/文件夹下，新建ion文件夹，把N板识别文件复制进去
 
-![image](EdgePLC BL234说明书V1.1-images/image80.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image14.png"
+style="width:5.75972in;height:1.45764in" />
 
-对BEILAI_N_PLC_234_V1.0_20260522.bin执行chmod +x BEILAI_N_PLC_234_V1.0_20260522.bin。然后安装软件。
+对BEILAI_N_PLC_234_V1.0_20260522.bin执行chmod +x
+BEILAI_N_PLC_234_V1.0_20260522.bin。然后安装软件。
 
 root@bliiot:/# cd /usr/demo/ion
 
@@ -408,25 +1877,32 @@ root@bliiot:/# ./BEILAI_N_PLC_234_V1.0_20260522.bin
 
 Md5 verify pass!
 
-Created symlink /etc/systemd/system/multi-user.target.wants/iolib.service → /etc/systemd/system/iolib.service.
+Created symlink
+/etc/systemd/system/multi-user.target.wants/iolib.service →
+/etc/systemd/system/iolib.service.
 
 Install complete!
 
-端口使用
+2)  **端口使用**
 
-DO使用
+<!-- -->
 
-这里以N2161为准（16路DO模块pnp），ion show查看IO板信息。ion help查看命令帮助。
+1.  **DO使用**
+
+这里以N2161为准（16路DO模块pnp），ion show查看IO板信息。ion
+help查看命令帮助。
 
 root@bliiot:/# ion help
 
 输入ion show查看信息。
 
-![image](EdgePLC BL234说明书V1.1-images/image79.png)
-![image](EdgePLC BL234说明书V1.1-images/image78.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image15.png"
+style="width:5.76319in;height:1.25556in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image77.png)
-![image](EdgePLC BL234说明书V1.1-images/image76.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image17.png"
+style="width:5.76111in;height:2.575in" />
 
 也可通过get命令获取通道值：
 
@@ -434,26 +1910,30 @@ root@bliiot:/# ion get 1014 //通过address查看
 
 address 1014 value 0
 
-![image](EdgePLC BL234说明书V1.1-images/image75.png)
-![image](EdgePLC BL234说明书V1.1-images/image74.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image19.png"
+style="width:5.76111in;height:0.47153in" />
 
-root@bliiot:/# ion set 1000 10 //通过address设置输出1
+root@bliiot:/# ion set 1000 10 //通过address设置输出10
 
 root@bliiot:/# ion get 1000 //通过address查看
 
-![image](EdgePLC BL234说明书V1.1-images/image73.png)
-![image](EdgePLC BL234说明书V1.1-images/image72.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image21.png"
+style="width:5.76667in;height:0.61736in" />
 
 设置通道值有信号量会亮灯
 
-对应的N2321、N2322、N2162类似。
+对应的N2321、N2322、N2162、N2084类似。
 
-DI使用
+2.  **DI使用**
 
-以N1323为例（32路DI模块干接点），DI模块为例，输入ion show查看信息。这边以17-32路端口单板为例。
+以N1323为例（32路DI模块干接点），DI模块为例，输入ion
+show查看信息。这边以17-32路端口单板为例。
 
-![image](EdgePLC BL234说明书V1.1-images/image71.png)
-![image](EdgePLC BL234说明书V1.1-images/image70.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image23.png"
+style="width:5.76458in;height:4.75694in" />
 
 通过get命令获取通道值以及ion show查看信息
 
@@ -461,61 +1941,189 @@ root@bliiot:/# ion get 2024 //通过address查看
 
 address 2024 value 0
 
-![image](EdgePLC BL234说明书V1.1-images/image69.png)
-![image](EdgePLC BL234说明书V1.1-images/image68.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image25.png"
+style="width:5.76111in;height:0.52361in" />
 
-将DI24（即为2通道）短接
+将DI24（即为24通道）短接
 
-![image](EdgePLC BL234说明书V1.1-images/image67.png)
-![image](EdgePLC BL234说明书V1.1-images/image66.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image27.png"
+style="width:5.76319in;height:1.55069in" />
 
 观察N板灯亮情况，对应DI短接形成回路灯亮。对应的N1163类似。
 
-湿节点测试(带电干结点)：以N1161为例（型）
+湿节点测试(带电干结点)：以N1161为例（NPN型）
 
-## 1、外接电源：将外接电源的正负极接到电源两端，电源的接到模块的公共端（COM/0V），接到模块的 DI 输入端子。
+1、外接电源：将外接电源的正负极接到电源两端，电源的正极接到模块的公共端（COM/0V），负极接到模块的
+DI 输入端子。
 
-## 2、灯亮，终端输入ion show查看已闭合。
+2、灯亮，终端输入ion show查看已闭合。
 
-型则公共端接，输入端子接。
+PNP型则公共端接负极，输入端子接正极。
 
 类似N1162、1321、1322对应其湿接点。
 
-AO使用
+3.  **AO使用**
 
-![image](EdgePLC BL234说明书V1.1-images/image65.png)
+以N4081为例（8路输出模块单端电流），量程设为0-20mA，输入ion
+show查看信息。
 
-![image](EdgePLC BL234说明书V1.1-images/image64.png)
+root@bliiot:/# ion show
 
-![image](EdgePLC BL234说明书V1.1-images/image63.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image29.png"
+style="width:5.76042in;height:1.14792in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image62.png)
+也可通过get命令获取通道值：
 
-![image](EdgePLC BL234说明书V1.1-images/image61.png)
+root@bliiot:/# ion get 4000 //通过address查看
 
-![image](EdgePLC BL234说明书V1.1-images/image60.png)
+address 4000 value 0
 
-![image](EdgePLC BL234说明书V1.1-images/image59.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image30.png"
+style="width:5.76597in;height:0.33611in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image58.png)
+root@bliiot:/# ion set 4000 10 //通过address设置输出10mA
 
-![image](EdgePLC BL234说明书V1.1-images/image57.png)
+root@bliiot:/# ion get 4000 //通过address查看
 
-![image](EdgePLC BL234说明书V1.1-images/image56.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image31.png"
+style="width:5.76111in;height:0.42639in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image55.png)
+通过高精度万用表直流电流档查看实际值与设置值是否相符,若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
-NTC使用
+对应的N4086差分输出电压类似。
 
-![image](EdgePLC BL234说明书V1.1-images/image54.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image32.png"
+style="width:5.7625in;height:1.17708in" />
 
-![image](EdgePLC BL234说明书V1.1-images/image53.png)
+4.  **AI使用**
 
-![image](EdgePLC BL234说明书V1.1-images/image52.png)
+以N3081为例（8路输入模块单端电流），量程设为0-20mA，输入ion
+show查看信息。
 
-### LED
+root@bliiot:/# ion show
 
-![image](EdgePLC BL234说明书V1.1-images/image51.jpeg)
+<img
+src="EdgePLC BL234说明书V1.1-images/image33.png"
+style="width:5.76319in;height:1.15694in" />
+
+使用信号发生器输出目标电流值，观察实际值是否与输入值保持一致，如对第一个通道输出10mA,通过ion
+show查看数值，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
+
+以第一通道为例，设定输出10mA，界面显示的数值即为该通道的实际输出值。
+
+root@bliiot:/# ion show
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image34.png"
+style="width:5.76597in;height:1.14653in" />
+
+对应的N3083单端输入电压类似。
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image35.png"
+style="width:5.76181in;height:1.12639in" />
+
+5.  **RTD使用**
+
+以N5041为例（4路RTD模块三线PT100），量程设为-200-850℃，输入ion
+show查看信息。
+
+root@bliiot:/# ion show
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image36.png"
+style="width:5.76458in;height:0.98958in" />
+
+使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值（对应pt100/1000温度阻值对应表）的偏差在允许误差范围内，即视为校准通过。
+
+对应的N5042、N5043、 N5044类似。
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image37.png"
+style="width:5.76667in;height:0.83403in" />
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image38.png"
+style="width:5.76111in;height:0.77639in" />
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image39.png"
+style="width:5.76736in;height:0.95833in" />
+
+6.  **NTC使用**
+
+以N3087为例（8路NTC模块10K3A1），量程为184.8-667828，输入ion
+show查看信息。
+
+root@bliiot:/# ion show
+
+使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image40.png"
+style="width:5.76528in;height:1.55764in" />
+
+3)  **量程模式修改**
+
+通过ion help命令，可以看到config的命令格式。
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image41.png"
+style="width:5.7625in;height:0.82847in" />
+
+在终端中执行以下命令，以获取设备当前的运行状态及模式设置指令：
+
+root@bliiot:/# ion getmode
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image42.png"
+style="width:5.76319in;height:0.66944in" />
+
+确认目标模式对应的数值后，使用以下命令进行模式切换：例如将N4081的量程设置为4~20MA。
+
+root@bliiot:/# ion setmode /<slot/> /<mode/>
+
+root@bliiot:/# ion setmode 4 4
+
+## LED
+
+<table style="width:63%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 49%" />
+</colgroup>
+<tbody>
+<tr>
+<td>LED灯</td>
+<td>说明</td>
+</tr>
+<tr>
+<td>PWR</td>
+<td><p>电源灯，接入电源正常时常亮。</p>
+<p>用户不可编辑。</p></td>
+</tr>
+<tr>
+<td>RUN</td>
+<td><p>默认设置：CPU使用率低于90%时闪烁，90%以上常亮。</p>
+<p>用户可编辑。</p></td>
+</tr>
+<tr>
+<td>LINK</td>
+<td><p>默认设置：有互联网连接时常亮，无互联网连接时熄灭。</p>
+<p>用户可编辑。</p></td>
+</tr>
+</tbody>
+</table>
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image43.jpeg"
+style="width:1.36319in;height:3.39514in" alt="EdgePLC A款 (1)" />
 
 LED指示灯如图,从左至右的顺序为LED2、LED1、LED0。其中LED2为POWER指示灯，上电后电源正常时常亮；LED1为RUN灯，系统正常运行时闪烁；LED0为LINK灯，使用有线网络连接互联网时常亮，4G或Wi-Fi时闪烁。文件为/etc/beilai_led.sh。
 
@@ -523,23 +2131,26 @@ LED指示灯如图,从左至右的顺序为LED2、LED1、LED0。其中LED2为POW
 
 root@bliiot:~# cat /sys/class/leds/user-led0/trigger
 
-[none] rc-feedback mmc0 mmc1 mmc2 timer oneshot heartbeat backlight gpio cpu0 cpu1 cpu2 cpu3 default-on transient
+/[none/] rc-feedback mmc0 mmc1 mmc2 timer oneshot heartbeat backlight
+gpio cpu0 cpu1 cpu2 cpu3 default-on transient
 
-其中[none]表示当前led0的触发条件为无。往trigger中写上述字符串，可以修改触发条件。
+其中/[none/]表示当前led0的触发条件为无。往trigger中写上述字符串，可以修改触发条件。
 
 当led触发条件设置为none时，用户可通过命令来控制led灯的亮灭
 
-控制led0亮：echo 1 >/sys/class/leds/user-led0/brightness
+控制led0亮：echo 1 />/sys/class/leds/user-led0/brightness
 
-root@bliiot:~# echo none >/sys/class/leds/user-led0/brightness
+root@bliiot:~# echo none />/sys/class/leds/user-led0/brightness
 
-root@bliiot:~# echo 1 >/sys/class/leds/user-led0/brightness
+root@bliiot:~# echo 1 />/sys/class/leds/user-led0/brightness
 
-控制led1灭：echo 0 >/sys/class/leds/user-led1/brightness
+控制led1灭：echo 0 />/sys/class/leds/user-led1/brightness
 
-### 网络接口
+## 网络接口
 
-![image](EdgePLC BL234说明书V1.1-images/image50.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image44.png"
+style="width:1.02847in;height:2.53819in" alt="EdgePLC A款 (1)" />
 
 如图所示，设备配备了三个百兆网口ETH1 、ETH2、ETH3。
 
@@ -547,13 +2158,17 @@ root@bliiot:~# echo 1 >/sys/class/leds/user-led0/brightness
 
 root@bliiot:~# ifconfig -a
 
-![image](EdgePLC BL234说明书V1.1-images/image49.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image45.png"
+style="width:5.76806in;height:2.95278in" />
 
 此时ETH2应显示为设定的静态IP地址192.168.1.122。
 
 通过ETH2进行SSH登录验证。
 
-![image](EdgePLC BL234说明书V1.1-images/image48.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image46.png"
+style="width:5.76181in;height:2.90972in" />
 
 更换网口测试时关闭其他网口：
 
@@ -573,33 +2188,38 @@ udhcpc: sending select for 192.168.1.122
 
 udhcpc: lease of 192.168.1.122 obtained, lease time 3600
 
-ping百度：ping www.baidu.com ，Ctrl+c结束
+ping百度：ping [www.baidu.com](http://www.baidu.com) ，Ctrl+c结束
 
 root@bliiot:~# ping www.baidu.com
 
-PING www.baidu.com(240e:ff:e020:99b:0:ff:b099:cff1 (240e:ff:e020:99b:0:ff:b099:cff1)) 56 data bytes
+PING www.baidu.com(240e:ff:e020:99b:0:ff:b099:cff1
+(240e:ff:e020:99b:0:ff:b099:cff1)) 56 data bytes
 
-## 64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1 (240e:ff:e020:99b:0:ff:b099:cff1): icmp_seq=1 ttl=54 time=8.09 ms
+64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1
+(240e:ff:e020:99b:0:ff:b099:cff1): icmp_seq=1 ttl=54 time=8.09 ms
 
-## 64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1 (240e:ff:e020:99b:0:ff:b099:cff1): icmp_seq=2 ttl=54 time=7.10 ms
+64 bytes from 240e:ff:e020:99b:0:ff:b099:cff1
+(240e:ff:e020:99b:0:ff:b099:cff1): icmp_seq=2 ttl=54 time=7.10 ms
 
 ^C
 
 --- www.baidu.com ping statistics ---
 
-## 2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
 
 rtt min/avg/max/mdev = 7.098/7.593/8.088/0.495 ms
 
 此时LINK灯亮。
 
-### USB接口
+## USB接口
 
-![image](EdgePLC BL234说明书V1.1-images/image47.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image47.png"
+style="width:1.44722in;height:3.39167in" alt="EdgePLC A款 (1)" />
 
 如图，设备带有2个USB2.0 HOST接口。支持FAT32格式U盘。
 
-接入测试用的U盘，这边run/media/sda为挂载文件夹，输入以下指令卸载并查看U盘是否可以检测：
+1.  接入测试用的U盘，这边run/media/sda为挂载文件夹，输入以下指令卸载并查看U盘是否可以检测：
 
 lsblk（查看是否挂载） mkfs.vfat /dev/sda1(格式化分区更好测速)
 
@@ -607,117 +2227,164 @@ umount /run/media/sda1（没有挂载就跳过）
 
 lsblk
 
-可以看到sdb1，并且能够看到实际的内存大小
+2.  可以看到sdb1，并且能够看到实际的内存大小
 
-![image](EdgePLC BL234说明书V1.1-images/image46.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image48.png"
+style="width:5.75903in;height:0.40972in" />
 
-然后输入以下指令测试写入：（第一次写入可以调成size=2G）
+3.  然后输入以下指令测试写入：（第一次写入可以调成size=2G）
 
-fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1 -iodepth_low=1 -iodepth_batch_complete=1 -direct=1 -rw=write -bs=1024K -size=1G -numjobs=1 -thread -group_reporting -name=write_job -ramp_time=1
+fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
+-iodepth_low=1 -iodepth_batch_complete=1 -direct=1 -rw=write -bs=1024K
+-size=1G -numjobs=1 -thread -group_reporting -name=write_job
+-ramp_time=1
 
-可以看到写入的速度。
+4.  可以看到写入的速度。
 
-![image](EdgePLC BL234说明书V1.1-images/image45.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image49.png"
+style="width:5.75972in;height:3.35208in" />
 
-再输入以下指令测试读取：
+5.  再输入以下指令测试读取：
 
-fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1 -iodepth_low=1 -iodepth_batch_complete=1 -direct=1 -rw=read -bs=1024K -size=1G -numjobs=1 -thread -group_reporting -name=write_job -ramp_time=1
+fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
+-iodepth_low=1 -iodepth_batch_complete=1 -direct=1 -rw=read -bs=1024K
+-size=1G -numjobs=1 -thread -group_reporting -name=write_job
+-ramp_time=1
 
-可以看到读取的速度。
+6.  可以看到读取的速度。
 
-![image](EdgePLC BL234说明书V1.1-images/image44.png)
+    <img
+    src="EdgePLC BL234说明书V1.1-images/image50.png"
+    style="width:5.75903in;height:0.38472in" />
 
-说明这个USB接口没有问题。
+7.  说明这个USB接口没有问题。
 
-更换下一个USB口，需要执行
+8.  更换下一个USB口，需要执行
 
-ps aux | grep fio 检查是否有残留进程，必要时用 kill 命令终止，然后再对进程同步sync
+ps aux /| grep fio 检查是否有残留进程，必要时用 kill
+命令终止，然后再对进程同步sync
 
-![image](EdgePLC BL234说明书V1.1-images/image43.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image51.png"
+style="width:5.76111in;height:0.5875in" />
 
-重复B~F操作，没有问题说明USB端口正常。
+9.  重复B~F操作，没有问题说明USB端口正常。
 
-![image](EdgePLC BL234说明书V1.1-images/image42.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image52.png"
+style="width:5.7625in;height:0.70069in" />
 
-### HDMI接口
+## HDMI接口
 
-![image](EdgePLC BL234说明书V1.1-images/image41.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image53.png"
+style="width:1.18611in;height:3.03611in" alt="EdgePLC A款 (1)" />
 
-HDMI接口如图所示。支持HDMI 1.4和HDMI 2.0标准。系统默认支持的分辨率为1920x1080@60fps，最高支持HDMI显示分辨率为 4K。
+HDMI接口如图所示。支持HDMI 1.4和HDMI
+2.0标准。系统默认支持的分辨率为1920x1080@60fps，最高支持HDMI显示分辨率为
+4K。
 
 将HDMI连接设备和显示器，此时显示器应显示T507的图标。若没有显示可尝试重启设备。
 
-### 调试串口
+## 调试串口
 
-![image](EdgePLC BL234说明书V1.1-images/image40.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image54.png"
+style="width:3.82361in;height:1.42708in"
+alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
 
 调试接口如图。可通过该端口进入设备系统。
 
-### SIM卡插槽
+## SIM卡插槽
 
-![image](EdgePLC BL234说明书V1.1-images/image38.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image55.png"
+style="width:3.44583in;height:1.28681in"
+alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
 
 SIM卡槽如图所示。
 
-### SD卡插槽
+## SD卡插槽
 
-![image](EdgePLC BL234说明书V1.1-images/image37.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image56.png"
+style="width:3.41458in;height:1.27431in"
+alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
 
 SD卡槽如图所示，支持FAT32格式SD卡。
 
-接入测试用的SD卡，属于系统启动卡，工作状态下，输入
+1.  接入测试用的SD卡，属于系统启动卡，工作状态下，输入
 
 fdisk -l
 
-可以看到mmcblk1p6，用于系统用户存储，并且能够看到实际的内存大小。
+2.  可以看到mmcblk1p6，用于系统用户存储，并且能够看到实际的内存大小。
 
 cd /run/media/mmcblk1p6
 
-![image](EdgePLC BL234说明书V1.1-images/image36.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image57.png"
+style="width:5.76806in;height:2.51944in" />
 
-然后输入以下指令测试写入：
+3.  然后输入以下指令测试写入：
 
-fio --filename=/run/media/mmcblk1p6/testfile --ioengine=psync --rw=write --bs=1024k --size=1G --numjobs=1 --thread --group_reporting --name=write_job --ramp_time=1 --direct=1
+fio --filename=/run/media/mmcblk1p6/testfile --ioengine=psync --rw=write
+--bs=1024k --size=1G --numjobs=1 --thread --group_reporting
+--name=write_job --ramp_time=1 --direct=1
 
-可以看到工作状态下的（负载）写入的速度。
+4.  可以看到工作状态下的（负载）写入的速度。
 
-![image](EdgePLC BL234说明书V1.1-images/image35.png)
+    <img
+    src="EdgePLC BL234说明书V1.1-images/image58.png"
+    style="width:5.76042in;height:0.81597in" />
 
-读取前需清除写入带来的缓存。
+5.  读取前需清除写入带来的缓存。
 
-sync; echo 3 | sudo tee /proc/sys/vm/drop_caches
+sync; echo 3 /| sudo tee /proc/sys/vm/drop_caches
 
-再输入以下指令测试读取：
+6.  再输入以下指令测试读取：
 
-fio --filename=/run/media/mmcblk1p6/testfile --ioengine=psync --rw=read --bs=1024k --size=1G --numjobs=1 --thread --group_reporting --name=read_job --ramp_time=1 --direct=1
+fio --filename=/run/media/mmcblk1p6/testfile --ioengine=psync --rw=read
+--bs=1024k --size=1G --numjobs=1 --thread --group_reporting
+--name=read_job --ramp_time=1 --direct=1
 
-可以看到工作状态下读取的速度。
+7.  可以看到工作状态下读取的速度。
 
-![image](EdgePLC BL234说明书V1.1-images/image34.png)
+    <img
+    src="EdgePLC BL234说明书V1.1-images/image59.png"
+    style="width:5.76528in;height:0.87083in" />
 
-A~F步骤都正常说明这个SD卡接口没有问题。
+    A~F步骤都正常说明这个SD卡接口没有问题。
 
-测试完同步数据，重新测试需要清除缓存和同步以及查看是否有文件夹并且删除。
+8.  测试完同步数据，重新测试需要清除缓存和同步以及查看是否有文件夹并且删除。
 
-sync; echo 3 | sudo tee /proc/sys/vm/drop_caches
+sync; echo 3 /| sudo tee /proc/sys/vm/drop_caches
 
 ls
 
 rm /run/media/mmcblk1p6/testfile
 
-![image](EdgePLC BL234说明书V1.1-images/image33.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image60.png"
+style="width:5.76111in;height:0.92708in" />
 
-### 重启按钮
+## 重启按钮
 
-![image](EdgePLC BL234说明书V1.1-images/image32.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image61.png"
+style="width:3.48681in;height:1.30139in"
+alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
 
 重启按钮如图所示。按下松开后设备重启。
 
-### PCIE接口
+注意：如需自定义RST按钮，请于下单前联系业务人员，默认配置为硬件复位。
+
+## PCIE接口
 
 PCIE接口支持4G和Wi-Fi功能。
 
-## 4G模块
+### 4G模块
 
 此处使用移远EC200模块为例（AT命令端口为/dev/ttyUSB1），测试程序位于/usr/demo/4G目录下。插入电话卡，连接好天线。
 
@@ -725,33 +2392,44 @@ PCIE接口支持4G和Wi-Fi功能。
 
 ls /dev 看有没有ttyUSB开头的设备，没有就是没识别到模块
 
-![image](EdgePLC BL234说明书V1.1-images/image31.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image62.png"
+style="width:5.76667in;height:2.13819in" />
 
-stty -F /dev/ttyUSB1 ispeed 115200 ospeed 115200 cs8 raw -echo //设置串口
+stty -F /dev/ttyUSB1 ispeed 115200 ospeed 115200 cs8 raw -echo
+//设置串口
 
-![image](EdgePLC BL234说明书V1.1-images/image30.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image63.png"
+style="width:5.76458in;height:0.23264in" />
 
 查信号 20以上 ：
 
-cat /dev/ttyUSB1 & echo -e "AT+CSQ\r" > /dev/ttyUSB1（输入两遍）
+cat /dev/ttyUSB1 & echo -e "AT+CSQ/r" /> /dev/ttyUSB1（输入两遍）
 
-![image](EdgePLC BL234说明书V1.1-images/image29.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image64.png"
+style="width:5.76528in;height:0.95764in" />
 
 查是4G模块否能正常和SIM卡通讯：
 
-echo -e "AT+CPIN?\r" > /dev/ttyUSB1
+echo -e "AT+CPIN?/r" /> /dev/ttyUSB1
 
-![image](EdgePLC BL234说明书V1.1-images/image27.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image65.png"
+style="width:5.76667in;height:0.58264in" />
 
 EC200还需加一条拨号指令
 
-echo -e "AT+QNETDEVCTL=3,1,1\r" > /dev/ttyUSB1
+echo -e "AT+QNETDEVCTL=3,1,1/r" /> /dev/ttyUSB1
 
 查是否连接运营商，
 
-echo -e "AT+COPS?\r" > /dev/ttyUSB1
+echo -e "AT+COPS?/r" /> /dev/ttyUSB1
 
-![image](EdgePLC BL234说明书V1.1-images/image26.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image66.png"
+style="width:5.76806in;height:0.58472in" />
 
 然后输入
 
@@ -769,25 +2447,29 @@ udhcpc: sending select for 192.168.43.100
 
 udhcpc: lease of 192.168.43.100 obtained, lease time 86400
 
-![image](EdgePLC BL234说明书V1.1-images/image25.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image67.png"
+style="width:5.76042in;height:0.67847in" />
 
 然后通过ping www.baidu.com /8.8.8.8-I usb0 测试上网。
 
 Ping不通百度加以下指令
 
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" /> /etc/resolv.conf
 
-![image](EdgePLC BL234说明书V1.1-images/image24.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image68.png"
+style="width:5.76458in;height:1.22222in" />
 
 （2）短信功能
 
 在测试程序目录下执行测试命令即可测试短信功能：
 
-./send_sms <device> <phonenumber> <text>
+./send_sms /<device/> /<phonenumber/> /<text/>
 
-命令说明：<device>为4G模块设备节点。<phonenumber>为发送短信目标手机号。<text>为短信发送内容，短信内容字符之间不可有空格，否则会提示错误。
+命令说明：/<device/>为4G模块设备节点。/<phonenumber/>为发送短信目标手机号。/<text/>为短信发送内容，短信内容字符之间不可有空格，否则会提示错误。
 
-例如：./send_sms /dev/ttyUSB1 152******** “test”
+例如：./send_sms /dev/ttyUSB1 152/*/*/*/*/*/*/*/* “test”
 
 此时对应号码应收到内容为“test”的短信。
 
@@ -795,11 +2477,11 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 在测试程序目录下执行测试命令即可测试拨号功能：
 
-./phone_call <device> <phonenumber>
+./phone_call /<device/> /<phonenumber/>
 
-命令说明：<device>为4G模块设备节点。<phonenumber>为拨打目标手机号。
+命令说明：/<device/>为4G模块设备节点。/<phonenumber/>为拨打目标手机号。
 
-例如：./phone_call /dev/ttyUSB1152********
+例如：./phone_call /dev/ttyUSB1152/*/*/*/*/*/*/*/*
 
 此时对应号码应收到设备来电。
 
@@ -807,15 +2489,16 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 在测试程序目录下执行测试命令即可测试GPS功能：
 
-./get_location <device> <timeout>
+./get_location /<device/> /<timeout/>
 
-命令说明：<device>为设备节点，以"ls /dev/ttyUSB*"命令查看结果为准，重启设备后可能会变化。<timeout>为等待返回经纬度信息的时间（单位为秒）。
+命令说明：/<device/>为设备节点，以"ls
+/dev/ttyUSB/*"命令查看结果为准，重启设备后可能会变化。/<timeout/>为等待返回经纬度信息的时间（单位为秒）。
 
 例如：./get_location /dev/ttyUSB1 1
 
 获取经纬度需等待几分钟时间，若获取失败、超时，请检查天线是否接好，并确保处于开阔场地进行测试。
 
-#### Wi-Fi模块
+### Wi-Fi模块
 
 此处使用的Wi-Fi模块为BL-R8188EU2（2.4G频段）。测试程序及驱动位于/usr/demo/Wi-Fi路径下，连接好天线。若无wlan0网卡，可按下方步骤安装驱动。
 
@@ -825,11 +2508,13 @@ echo "nameserver 8.8.8.8" > /etc/resolv.conf
 
 lsmod
 
-![image](EdgePLC BL234说明书V1.1-images/image23.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image69.png"
+style="width:5.76458in;height:0.67569in" />
 
 进入测试程序目录下，关闭其他网络，仅保留Wi-Fi网络，加载Wi-Fi驱动。
 
-cd /usr/demo/wifi/ # 进入驱动目录
+cd /usr/demo/wifi/ /# 进入驱动目录
 
 ifconfig eth1 down
 
@@ -841,21 +2526,28 @@ insmod -f 8188eu.ko //加载Wi-Fi驱动，有就跳过
 
 连接Wi-Fi：
 
-ifconfig wlan0 up #打开wlan0
+ifconfig wlan0 up /#打开wlan0
 
-./wifi_setup.sh -i bliiot -p bebetter #连接Wi-Fi，-i后面接Wi-Fi名，-p后面接密码
+./wifi_setup.sh -i bliiot -p bebetter
+/#连接Wi-Fi，-i后面接Wi-Fi名，-p后面接密码
 
-![image](EdgePLC BL234说明书V1.1-images/image22.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image70.png"
+style="width:5.76181in;height:1.80764in" />
 
-ifconfig #查看wlan0有无IP
+ifconfig /#查看wlan0有无IP
 
-![image](EdgePLC BL234说明书V1.1-images/image21.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image71.png"
+style="width:5.76042in;height:1.94931in" />
 
 最后ping百度测试：
 
 ping www.baidu.com （百度域名不一定成功转IP，使用百度IP）
 
-![image](EdgePLC BL234说明书V1.1-images/image20.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image72.png"
+style="width:5.76181in;height:1.43889in" />
 
 （2）AP功能
 
@@ -877,114 +2569,275 @@ insmod -f 8188eu.ko //加载Wi-Fi驱动，有就跳过
 
 nano rtl_hostapd_2G.conf
 
-## 设备登录
+## 硬件看门狗
 
-### USB登录
+看门狗控制引脚：PE0，置1时关闭硬件看门狗。喂狗引脚：PG16。硬件看门狗超时时间为30ms。
 
-进入此电脑——管理——设备管理器，打开端口，插入USB线到micro USB，此时刷新的端口即为连接设备的端口。
+## 外部RTC
 
-![image](EdgePLC BL234说明书V1.1-images/image19.png)
+本设备含一个外部RTC时钟。
+
+查看外部 RTC 设备节点：
+
+root@BL234-bliiot:~# ls /dev/rtc/*
+
+/dev/rtc /dev/rtc0
+
+root@BL234-bliiot:~# dmesg /| grep rtc0
+
+/[ 4.319167/] rtc-isl1208 5-006f: rtc core: registered rtc-isl1208 as
+rtc0
+
+查看系统时钟：
+
+root@BL234-bliiot:~# date
+
+Thu 23 Apr 10:28:42 BST 2026
+
+设置RTC时间：
+
+root@BL234-bliiot:~# sudo hwclock --set --date="2026-4-23 17:30:00"
+
+root@BL234-bliiot:~# sudo hwclock -r
+
+同步RTC时钟至系统时钟：
+
+root@BL234-bliiot:~# sudo hwclock -s
+
+同步系统时钟到 RTC 的时钟：
+
+root@BL234-bliiot:~# sudo hwclock -w
+
+再次查看时间
+
+root@BL234-bliiot:~# date
+
+Thu 23 Apr 17:31:56 BST 2026
+
+## 加密芯片
+
+加密芯片型号为RJGT102。基于SHA-256的加密认证算法,
+同时提供可配置的看门狗定时器和对外复位功能，与MCU通过 I²C-5
+串行接口通信，芯片
+
+支持低功耗模式。
+
+设备内使用加密芯片的demo，是通过将/proc/sys/kernel/random/uuid写入加密芯片，同时保留uuid至/usr/rjgt_unique.json，使用时取出加密芯片数据进行对比,外部数据与加密芯片内部数据相同，则通过加密验证。
+
+使用请自行修改Makefile文件中交叉编译器路径，再make编译；或参考《RJGT102数据手册》。
+
+运行示例程序rigt102，若uuid正确，则会出现如下回复。
+
+root@BL234:~#usr/demo/rjgt# ./rigt102
+
+open unique file failed, create unique file!
+
+random uuid would write rjgt102 : b6275e22-4928-4828-88fb-54a6fd8!
+
+Contrast success
+
+root@BL234:~#usr/demo/rjgt#./rigt102
+
+Contrast success
+
+# 设备登录
+
+## USB登录
+
+进入此电脑——管理——设备管理器，打开端口，插入USB线到micro
+USB，此时刷新的端口即为连接设备的端口。
+
+<img
+src="EdgePLC BL234说明书V1.1-images/image73.png"
+style="width:3.62222in;height:2.76319in" />
 
 此处以SecureCRT为例，在软件中新建连接，选择串口登录，选择对应的端口，波特率115200，数据位8，校验位None，停止位1。点击connect即可进入设备。
 
-Linux系统默认无登录密码
+**Linux系统默认无登录密码**
 
-Ubuntu系统默认登录账号：root 密码：root
+**Ubuntu系统默认登录账号：root 密码：root**
 
-![image](EdgePLC BL234说明书V1.1-images/image18.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image74.png"
+style="width:2.10625in;height:1.92083in" />
 
-### SSH2登录
+## SSH2登录
 
 在使用网口登录前需设置对应网口的IP。此处以ETH2为例。此处ETH2已连接路由器，获取到的IP为192.168.2.107。电脑IP在2网段。
 
-![image](EdgePLC BL234说明书V1.1-images/image16.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image75.png"
+style="width:4.06875in;height:2.46944in" />
 
 点击创建连接，选择协议为SSH2，主机名填写为设备IP：192.168.2.107，端口22，用户名root，点击Connect连接。
 
-![image](EdgePLC BL234说明书V1.1-images/image15.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image76.png"
+style="width:2.83958in;height:2.64653in" />
 
 选择接受，即连接成功。
 
-![image](EdgePLC BL234说明书V1.1-images/image14.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image77.png"
+style="width:3.92778in;height:1.66389in" />
 
-## 系统烧录
+# 系统烧录
 
-### Micro SD卡启动
+## Micro SD卡启动
 
-#### 启动卡制作
+### 启动卡制作
 
 将空白Micro SD卡连接至电脑，双击"PhoenixCard.exe"打开系统固化工具。
 
-![image](EdgePLC BL234说明书V1.1-images/image13.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image78.png"
+style="width:4.52708in;height:3.29236in" />
 
 工具运行后会自动识别接入到PC端的Micro SD卡，如下图所示。
 
-![image](EdgePLC BL234说明书V1.1-images/image12.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image79.png"
+style="width:4.66806in;height:3.65417in" />
 
 将系统镜像拷贝至非中文路径的目录下。在PhoenixCard软件上点击“固件”选择目标镜像文件，接着选择“启动卡”，最后点击“烧卡”制作“启动卡”
 
-![image](EdgePLC BL234说明书V1.1-images/image11.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image80.png"
+style="width:4.7in;height:3.70417in" />
 
 系统启动卡制作完成后，状态栏呈现绿色并打印如下信息。
 
-![image](EdgePLC BL234说明书V1.1-images/image10.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image81.png"
+style="width:4.72708in;height:3.70208in" />
 
-#### 从启动卡启动
+### 从启动卡启动
 
-将启动卡插至设备Micro SD卡槽，然后将设备上电，系统将从启动卡启动后自动登录root用户，串口调试终端会打印如下类似启动信息。
+将启动卡插至设备Micro
+SD卡槽，然后将设备上电，系统将从启动卡启动后自动登录root用户，串口调试终端会打印如下类似启动信息。
 
-"storage type = 1"表示Micro SD模式启动，"storage type = 2"表示eMMC模式启动。
+"storage type = 1"表示Micro SD模式启动，"storage type =
+2"表示eMMC模式启动。
 
-![image](EdgePLC BL234说明书V1.1-images/image9.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image82.png"
+style="width:5.7625in;height:2.35486in" />
 
-### EMMC启动
+## EMMC启动
 
-#### 烧录卡制作
+### 烧录卡制作
 
 将空白Micro SD卡连接至电脑，双击"PhoenixCard.exe"打开系统固化工具。
 
-![image](EdgePLC BL234说明书V1.1-images/image13.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image78.png"
+style="width:4.52708in;height:3.29236in" />
 
 工具运行后会自动识别接入到PC端的Micro SD卡，如下图所示。
 
-![image](EdgePLC BL234说明书V1.1-images/image12.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image79.png"
+style="width:4.66806in;height:3.65417in" />
 
 将系统镜像拷贝至非中文路径的目录下。在PhoenixCard软件上点击“固件”选择目标镜像文件，接着选择“量产卡”，最后点击“烧卡”制作“量产卡”。
 
-![image](EdgePLC BL234说明书V1.1-images/image8.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image83.png"
+style="width:4.62986in;height:3.63125in" />
 
 “量产卡”制作完成后，状态栏将会打印如下信息。
 
-![image](EdgePLC BL234说明书V1.1-images/image7.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image84.png"
+style="width:5.32708in;height:4.17292in" />
 
-#### 系统烧录
+### 系统烧录
 
-将制作好的SD卡插至设备Micro SD卡槽，上电后将从SD卡启动，并自动固化系统至eMMC中。当系统固化完成后，设备将自动掉电。串口打印如下。
+将制作好的SD卡插至设备Micro
+SD卡槽，上电后将从SD卡启动，并自动固化系统至eMMC中。当系统固化完成后，设备将自动掉电。串口打印如下。
 
-![image](EdgePLC BL234说明书V1.1-images/image5.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image85.png"
+style="width:5.76458in;height:3.45486in" />
 
-请将设备断电，取出SD卡，然后重新上电，设备将从eMMC启动系统，系统启动后自动登录root用户，串口调试终端会打印如下类似启动信息。"storage type = 1"表示Micro SD模式启动，"storage type = 2"表示eMMC模式启动。
+请将设备断电，取出SD卡，然后重新上电，设备将从eMMC启动系统，系统启动后自动登录root用户，串口调试终端会打印如下类似启动信息。"storage
+type = 1"表示Micro SD模式启动，"storage type = 2"表示eMMC模式启动。
 
-![image](EdgePLC BL234说明书V1.1-images/image4.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image86.png"
+style="width:5.76042in;height:3.79722in" />
 
-### 系统分区
+## 系统分区
 
-| 设备名称 | 设备分区 | 分区说明 |
-|---|---|---|
-| Linux 系统启动卡 | /dev/mmcblk1p1 | boot-resource 分区，存放 bootlogo.bmp 等资源 |
-| Linux 系统启动卡 | /dev/mmcblk1p2 | env 分区，存放 U-Boot 环境变量 |
-| Linux 系统启动卡 | /dev/mmcblk1p3 | boot 分区，存放内核镜像 |
-| Linux 系统启动卡 | /dev/mmcblk1p4 | rootfs 分区，存放根文件系统镜像 |
-| Linux 系统启动卡 | /dev/mmcblk1p5 | 私有数据分区，存放私有数据 |
-| Linux 系统启动卡 | /dev/mmcblk1p6 | 用户分区，存放用户数据 |
-| eMMC 设备 | /dev/mmcblk0p1 | boot-resource 分区，存放 bootlogo.bmp 等资源 |
-| eMMC 设备 | /dev/mmcblk0p2 | env 分区，存放 U-Boot 环境变量 |
-| eMMC 设备 | /dev/mmcblk0p3 | boot 分区，存放内核镜像 |
-| eMMC 设备 | /dev/mmcblk0p4 | rootfs 分区，存放根文件系统镜像 |
-| eMMC 设备 | /dev/mmcblk0p5 | 私有数据分区，存放私有数据 |
-| eMMC 设备 | /dev/mmcblk0p6 | 用户分区，存放用户数据 |
+<table>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 22%" />
+<col style="width: 54%" />
+</colgroup>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>设备名称</strong></td>
+<td style="text-align: center;"><strong>设备分区</strong></td>
+<td style="text-align: center;"><strong>分区说明</strong></td>
+</tr>
+<tr>
+<td rowspan="6" style="text-align: center;">Linux 系统启动卡</td>
+<td style="text-align: center;">/dev/mmcblk1p1</td>
+<td style="text-align: center;">boot-resource 分区，存放 bootlogo.bmp
+等资源</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk1p2</td>
+<td style="text-align: center;">env 分区，存放 U-Boot 环境变量</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk1p3</td>
+<td style="text-align: center;">boot 分区，存放内核镜像</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk1p4</td>
+<td style="text-align: center;">rootfs 分区，存放根文件系统镜像</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk1p5</td>
+<td style="text-align: center;">私有数据分区，存放私有数据</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk1p6</td>
+<td style="text-align: center;">用户分区，存放用户数据</td>
+</tr>
+<tr>
+<td rowspan="6" style="text-align: center;">eMMC 设备</td>
+<td style="text-align: center;">/dev/mmcblk0p1</td>
+<td style="text-align: center;">boot-resource 分区，存放 bootlogo.bmp
+等资源</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk0p2</td>
+<td style="text-align: center;">env 分区，存放 U-Boot 环境变量</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk0p3</td>
+<td style="text-align: center;">boot 分区，存放内核镜像</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk0p4</td>
+<td style="text-align: center;">rootfs 分区，存放根文件系统镜像</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk0p5</td>
+<td style="text-align: center;">私有数据分区，存放私有数据</td>
+</tr>
+<tr>
+<td style="text-align: center;">/dev/mmcblk0p6</td>
+<td style="text-align: center;">用户分区，存放用户数据</td>
+</tr>
+</tbody>
+</table>
 
-将Linux系统固化至Micro SD或eMMC后，Micro SD或eMMC将会被划分为6个分区，并且在rootfs分区预留一定空间，用于快速测试使用。
+将Linux系统固化至Micro SD或eMMC后，Micro
+SD或eMMC将会被划分为6个分区，并且在rootfs分区预留一定空间，用于快速测试使用。
 
 为保证文件系统的健壮性，一般不推荐使用rootfs分区做频繁的数据读写。推荐使用用户分区"/dev/mmcblk0p6"或"/dev/mmcblk1p6"做日常数据存储，使用前请参考如下方法进行格式化后使用。本次操作以Linux系统启动卡的"/dev/mmcblk1p6"分区为例进行演示。
 
@@ -998,49 +2851,69 @@ mount /dev/mmcblk1p6 /mnt/sdcard/mmcblk1p6/
 
 df -h
 
-## 导轨安装
+# 导轨安装
 
 配备导轨卡扣分为下段式短款导轨结构。此设计预留了充足的螺丝锁付空间，便于用户进行安装操作。
 
-![image](EdgePLC BL234说明书V1.1-images/image3.png)
-![image](EdgePLC BL234说明书V1.1-images/image2.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image87.png"
+style="width:1.42569in;height:2.77153in"
+alt="8aec9eb215acbbce3b8954b2e1062111_compress" /><img
+src="EdgePLC BL234说明书V1.1-images/image88.png"
+style="width:1.41389in;height:2.76042in"
+alt="8aec9eb215acbbce3b8954b2e1062111_compress" />
 
 将卡扣垂直向下按压，直至其完全嵌入并锁定于导轨底部，即可完成安装。长导轨卡无需额外卡扣，因其内部已预设专用凹槽结构，可直接实现稳固连接。
 
-![image](EdgePLC BL234说明书V1.1-images/image1.png)
+<img
+src="EdgePLC BL234说明书V1.1-images/image89.png"
+style="width:0.83611in;height:1.94236in"
+alt="ac31d771be6b72005cba9ec2e46da2bc_compress" />
 
-## 软件支持
+# 软件支持
 
-OpenPLC
+- OpenPLC
 
-详细使用方法请参考《OpenPLC使用说明书》
+  详细使用方法请参考《OpenPLC使用说明书》
 
-Node-ed
+- Node-Red
 
-详细使用方法请参考《Node-ed使用说明书》
+  详细使用方法请参考《Node-Red使用说明书》
 
-QuickConfig
+<!-- -->
 
-详细使用方法请参考《QuickConfig使用说明书》
+- QuickConfig
 
-BLRAT
+  详细使用方法请参考《QuickConfig使用说明书》
 
-详细使用方法请参考《BLRAT使用说明书》
+- BLRAT
 
-EdgeCoder
+  详细使用方法请参考《BLRAT使用说明书》
 
-详细使用方法请参考《EdgeCoder使用说明书》
+- 
 
-## 保修条款
+- 
 
-## 1) 此设备从购买之日算起，为期一年内有任何材料或质量问题，免费维修。
+- EdgeCoder
 
-## 2) 此一年保修不包括任何人为损坏、操作不当等造成的产品故障问题。
+  详细使用方法请参考《EdgeCoder使用说明书》
 
-## 技术支持
+- Codesys
+
+  详细使用方法请参考《Codesys使用说明书》
+
+NexPLC、BLIoTLink、FUXA等软件平台将持续迭代更新。如需获取进一步的技术支持或了解后续规划，欢迎随时与我们联系。
+
+# 保修条款
+
+1/) 此设备从购买之日算起，为期一年内有任何材料或质量问题，免费维修。
+
+2/) 此一年保修不包括任何人为损坏、操作不当等造成的产品故障问题。
+
+# 技术支持
 
 深圳市钡铼技术有限公司
 
 电话：0755-29451836
 
-网址：http://www.bliiot.com
+网址：[http://www.bliiot.com](http://www.4g-iot.com)
