@@ -1,22 +1,23 @@
-<figure>
-<img
-src="EdgePLC BL235说明书V1.1-images/image2.jpeg"
-style="width:2.97639in;height:3.98056in" alt="EdgePLC A款 (2)" />
-<figcaption><p>版本：V1.1<br />
-日期：2026-09-10<br />
-版权：<strong>深圳市钡铼技术有限公司<br />
-</strong>网址：<a
-href="http://www.bliiot.cn">www.bliiot.cn</a></p></figcaption>
-</figure>
+
+
+![EdgePLC A款 (2)](EdgePLC BL235说明书V1.1-images/image2.jpeg)
+
+版本：V1.1
+日期：2026-09-10
+版权：**深圳市钡铼技术有限公司
+**网址：[www.bliiot.cn](http://www.bliiot.cn)
+
+
 
 EdgePLC BL235系列
 
-<figure>
-<img
-src="EdgePLC BL235说明书V1.1-images/image1.png"
-style="width:2.68681in;height:1.89653in" />
-<figcaption><p>说明书</p></figcaption>
-</figure>
+
+
+![](EdgePLC BL235说明书V1.1-images/image1.png)
+
+说明书
+
+
 
 EdgePLC BL235工业边缘控制器
 
@@ -97,13 +98,7 @@ BL235系列工业边缘控制器专为智能产线控制、储能EMS、光伏逆
 
 产品外观结构与尺寸如下图：
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image4.png"
-style="width:2.29236in;height:2.85556in"
-alt="F:/2025_9/EdgePLC/标签外壳/标准款清晰图片.png标准款清晰图片" /><img
-src="EdgePLC BL235说明书V1.1-images/image5.png"
-style="width:2.30972in;height:2.87986in"
-alt="F:/2025_9/EdgePLC/标签外壳/A款清晰图片.pngA款清晰图片" />
+![F:/2025_9/EdgePLC/标签外壳/标准款清晰图片.png标准款清晰图片](EdgePLC BL235说明书V1.1-images/image4.png)![F:/2025_9/EdgePLC/标签外壳/A款清晰图片.pngA款清晰图片](EdgePLC BL235说明书V1.1-images/image5.png)
 
 ## 1.3 技术参数
 
@@ -594,11 +589,7 @@ style="text-align: center;"><strong>X系列IO板选型表</strong></td>
 
 ## 2.1 N板介绍
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image6.png"
-style="width:3.14375in;height:1.87847in" alt="EdgePLC A款 (10)" /><img
-src="EdgePLC BL235说明书V1.1-images/image7.png"
-style="width:2.56042in;height:2.56042in" />
+![EdgePLC A款 (10)](EdgePLC BL235说明书V1.1-images/image6.png)![](EdgePLC BL235说明书V1.1-images/image7.png)
 
 工业自动化控制系统中常见的分布式I/O模块，例如：右侧具体为32通道数字量输入模块，型号为N1321(NPN)。这类模块通常用于连接现场的传感器、按钮、限位开关等设备，将物理信号转换为PLC（可编程逻辑控制器）可识别的数字信号。
 
@@ -634,10 +625,7 @@ NPN输入特性：适用于连接NPN型传感器，这类传感器在工业现�
 
 ## 2.2 电源接口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image8.png"
-style="width:2.57639in;height:1.04931in"
-alt="e2c8802fdadeb1e5530381aefa943291_origin(1)" />。
+![e2c8802fdadeb1e5530381aefa943291_origin(1)](EdgePLC BL235说明书V1.1-images/image8.png)。
 
 设备提供1路输入。支持DC12~24V输入，支持反接防护
 
@@ -1846,21 +1834,15 @@ cat /dev/ttyS4 //等待查看接收到的数据
 
 串口助手收到数据
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image9.png"
-style="width:5.77153in;height:0.22708in" />
+![](EdgePLC BL235说明书V1.1-images/image9.png)
 
 串口助手发送数据
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image10.png"
-style="width:5.77153in;height:0.52986in" />
+![](EdgePLC BL235说明书V1.1-images/image10.png)
 
 终端界面收到数据
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image11.png"
-style="width:5.7625in;height:0.62361in" />
+![](EdgePLC BL235说明书V1.1-images/image11.png)
 
 按“Ctrl+C”停止。
 
@@ -1878,32 +1860,24 @@ root@bliiot:~# ip link set can0 type can bitrate 1000000
 
 root@bliiot:~# ifconfig can0 up
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image13.png"
-style="width:5.76111in;height:1.63194in" />
+![](EdgePLC BL235说明书V1.1-images/image13.png)
 
 接口启动后，可使用 cansend 工具向 CAN 总线发送测试数据帧。以下命令将发送
 ID 为 123、数据长度为 8 字节的标准帧：
 
 root@bliiot:~# cansend can0 123#1122334455667788
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image14.png"
-style="width:5.76597in;height:0.31806in" />
+![](EdgePLC BL235说明书V1.1-images/image14.png)
 
 Cangaroo工具收到数据
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image15.png"
-style="width:5.7625in;height:0.28681in" />
+![](EdgePLC BL235说明书V1.1-images/image15.png)
 
 使用 candump 工具可实时监听并显示 CAN 总线上的接收数据。
 
 root@bliiot:~# candump can0
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image16.png"
-style="width:5.7625in;height:0.33819in" />
+![](EdgePLC BL235说明书V1.1-images/image16.png)
 
 若CAN0接收正常，用其它设备发送该数据则应收到
 
@@ -1911,9 +1885,7 @@ root@bliiot:~# candump can0
 
 can0 123 /[8/] 11 22 33 44 55 66 77 88
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image17.png"
-style="width:5.76181in;height:0.4875in" />
+![](EdgePLC BL235说明书V1.1-images/image17.png)
 
 ### 2.3.12 N板端口使用
 
@@ -1923,19 +1895,13 @@ style="width:5.76181in;height:0.4875in" />
 
 插上网线写入ifconfig指令获取IP，通过SSH登录
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image18.png"
-style="width:5.7625in;height:0.84861in" />
+![](EdgePLC BL235说明书V1.1-images/image18.png)
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image19.png"
-style="width:5.76458in;height:3.70764in" />
+![](EdgePLC BL235说明书V1.1-images/image19.png)
 
 通过左边文件夹页面在usr/demo/文件夹下，新建ion文件夹，把N板识别文件复制进去
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image20.png"
-style="width:5.75556in;height:1.94375in" />
+![](EdgePLC BL235说明书V1.1-images/image20.png)
 
 对BEILAI_N_PLC_235_V1.0_20260824.bin执行chmod +x
 BEILAI_N_PLC_235_V1.0_20260824.bin。然后安装软件。
@@ -1967,13 +1933,9 @@ root@bliiot:/# ion help
 
 输入ion show查看信息。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image21.png"
-style="width:5.75972in;height:1.07778in" />
+![](EdgePLC BL235说明书V1.1-images/image21.png)
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image22.png"
-style="width:5.76111in;height:2.02153in" />
+![](EdgePLC BL235说明书V1.1-images/image22.png)
 
 也可通过get命令获取通道值：
 
@@ -1981,17 +1943,13 @@ root@bliiot:/# ion get 1014 //通过address查看
 
 address 1014 value 0
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image23.png"
-style="width:5.7625in;height:0.43681in" />
+![](EdgePLC BL235说明书V1.1-images/image23.png)
 
 root@bliiot:/# ion set 1000 1 //通过address设置输出1
 
 root@bliiot:/# ion get 1000 //通过address查看
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image24.png"
-style="width:5.76458in;height:0.55903in" />
+![](EdgePLC BL235说明书V1.1-images/image24.png)
 
 设置通道值有信号量会亮灯
 
@@ -2002,9 +1960,7 @@ style="width:5.76458in;height:0.55903in" />
 以N1323为例（32路DI模块干接点），DI模块为例，输入ion
 show查看信息。这边以17-32路端口单板为例。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image25.png"
-style="width:5.76389in;height:4.3875in" />
+![](EdgePLC BL235说明书V1.1-images/image25.png)
 
 通过get命令获取通道值以及ion show查看信息
 
@@ -2012,15 +1968,11 @@ root@bliiot:/# ion get 2024 //通过address查看
 
 address 2024 value 0
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image26.png"
-style="width:5.76667in;height:0.49861in" />
+![](EdgePLC BL235说明书V1.1-images/image26.png)
 
 将DI24（即为24通道）短接
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image28.png"
-style="width:5.76319in;height:1.38681in" />
+![](EdgePLC BL235说明书V1.1-images/image28.png)
 
 观察N板灯亮情况，对应DI短接形成回路灯亮。对应的N1163类似。
 
@@ -2042,9 +1994,7 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image30.png"
-style="width:5.76111in;height:1.33542in" />
+![](EdgePLC BL235说明书V1.1-images/image30.png)
 
 也可通过get命令获取通道值：
 
@@ -2052,25 +2002,19 @@ root@bliiot:/# ion get 4000 //通过address查看
 
 address 4000 value 4
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image32.png"
-style="width:5.76319in;height:0.52014in" />
+![](EdgePLC BL235说明书V1.1-images/image32.png)
 
 root@bliiot:/# ion set 4000 10 //通过address设置输出10mA
 
 root@bliiot:/# ion get 4000 //通过address查看
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image34.png"
-style="width:5.76458in;height:0.55903in" />
+![](EdgePLC BL235说明书V1.1-images/image34.png)
 
 通过高精度万用表直流电流档查看实际值与设置值是否相符,若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
 对应的N4086差分输出电压类似。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image36.png"
-style="width:5.76528in;height:1.26389in" />
+![](EdgePLC BL235说明书V1.1-images/image36.png)
 
 4.  **AI使用**
 
@@ -2079,9 +2023,7 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image38.png"
-style="width:5.76597in;height:1.45208in" />
+![](EdgePLC BL235说明书V1.1-images/image38.png)
 
 使用信号发生器输出目标电流值，观察实际值是否与输入值保持一致，如对第一个通道输出20mA,通过ion
 show查看数值，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
@@ -2090,15 +2032,11 @@ show查看数值，若显示值与理论值的偏差在允许误差范围内，�
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image39.png"
-style="width:5.76181in;height:1.46597in" />
+![](EdgePLC BL235说明书V1.1-images/image39.png)
 
 对应的N3083单端输入电压类似。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image41.png"
-style="width:5.76319in;height:1.54167in" />
+![](EdgePLC BL235说明书V1.1-images/image41.png)
 
 5.  **RTD使用**
 
@@ -2107,25 +2045,17 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image42.png"
-style="width:5.76667in;height:0.98819in" />
+![](EdgePLC BL235说明书V1.1-images/image42.png)
 
 使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值（对应pt100/1000温度阻值对应表）的偏差在允许误差范围内，即视为校准通过。
 
 对应的N5042、N5043、 N5044类似。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image44.png"
-style="width:5.76597in;height:0.98264in" />
+![](EdgePLC BL235说明书V1.1-images/image44.png)
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image45.png"
-style="width:5.76528in;height:0.97847in" />
+![](EdgePLC BL235说明书V1.1-images/image45.png)
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image46.png"
-style="width:5.76181in;height:0.97014in" />
+![](EdgePLC BL235说明书V1.1-images/image46.png)
 
 6.  **NTC使用**
 
@@ -2136,25 +2066,19 @@ root@bliiot:/# ion show
 
 使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image48.png"
-style="width:5.76389in;height:1.47917in" />
+![](EdgePLC BL235说明书V1.1-images/image48.png)
 
 3)  **量程模式修改**
 
 通过ion help命令，可以看到config的命令格式。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image49.png"
-style="width:5.7625in;height:0.82847in" />
+![](EdgePLC BL235说明书V1.1-images/image49.png)
 
 在终端中执行以下命令，以获取设备当前的运行状态及模式设置指令：
 
 root@bliiot:/# ion getmode
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image50.png"
-style="width:5.76319in;height:0.66944in" />
+![](EdgePLC BL235说明书V1.1-images/image50.png)
 
 确认目标模式对应的数值后，使用以下命令进行模式切换：例如将N4081的量程设置为4~20MA。
 
@@ -2194,9 +2118,7 @@ root@bliiot:/# ion setmode 4 4
 </tbody>
 </table>
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image61.jpeg"
-style="width:1.36319in;height:3.39514in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL235说明书V1.1-images/image61.jpeg)
 
 LED指示灯如图,从左至右的顺序为LED2、LED1、LED0。其中LED2为POWER指示灯，上电后电源正常时常亮；LED1为RUN灯，系统正常运行时闪烁；LED0为LINK灯，使用有线网络连接互联网时常亮，4G或Wi-Fi时闪烁。文件为/etc/beilai_led.sh。
 
@@ -2221,9 +2143,7 @@ root@bliiot:~# echo 1 />/sys/class/leds/user-led0/brightness
 
 ## 2.6 网络接口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image62.png"
-style="width:1.02847in;height:2.53819in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL235说明书V1.1-images/image62.png)
 
 如图所示，设备配备了三个百兆网口ETH1、ETH2、ETH3
 
@@ -2231,9 +2151,7 @@ style="width:1.02847in;height:2.53819in" alt="EdgePLC A款 (1)" />
 
 root@BL235:~# ifconfig -a
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image63.png"
-style="width:5.76319in;height:3.64861in" />
+![](EdgePLC BL235说明书V1.1-images/image63.png)
 
 此时ETH1应显示为设定的静态IP地址192.168.1.226。
 
@@ -2247,23 +2165,17 @@ style="width:5.76319in;height:3.64861in" />
 
 root@BL235-bliiot:~# udhcpc -i eth1
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image65.png"
-style="width:5.76667in;height:0.7375in" />
+![](EdgePLC BL235说明书V1.1-images/image65.png)
 
 ping百度：ping 8.8.8.8 ，Ctrl+c结束
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image66.png"
-style="width:5.76389in;height:1.31944in" />
+![](EdgePLC BL235说明书V1.1-images/image66.png)
 
 此时LINK灯亮。
 
 ## 2.7 USB接口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image68.png"
-style="width:1.44722in;height:3.39167in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL235说明书V1.1-images/image68.png)
 
 如图，设备带有2个USB2.0 HOST接口。支持FAT32格式U盘。
 
@@ -2277,9 +2189,7 @@ lsblk
 
 2.  可以看到sdb1，并且能够看到实际的内存大小
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image69.png"
-style="width:5.76667in;height:0.58056in" />
+![](EdgePLC BL235说明书V1.1-images/image69.png)
 
 3.  安装fio工具
 
@@ -2296,9 +2206,7 @@ fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 
 5.  可以看到写入的速度。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image71.png"
-style="width:5.76528in;height:0.95972in" />
+![](EdgePLC BL235说明书V1.1-images/image71.png)
 
 6.  再输入以下指令测试读取：
 
@@ -2309,9 +2217,7 @@ fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 
 7.  可以看到读取的速度。
 
-    <img
-    src="EdgePLC BL235说明书V1.1-images/image73.png"
-    style="width:5.76389in;height:1.01806in" />
+    ![](EdgePLC BL235说明书V1.1-images/image73.png)
 
 8.  说明这个USB接口没有问题。
 
@@ -2320,21 +2226,15 @@ fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 ps aux /| grep fio //检查是否有残留进程，必要时用 kill+ID
 命令终止，然后再对进程同步sync
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image75.png"
-style="width:5.76597in;height:1.5125in" />
+![](EdgePLC BL235说明书V1.1-images/image75.png)
 
 10. 重复B~F操作，没有问题说明USB端口正常。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image76.png"
-style="width:5.76458in;height:0.90556in" />
+![](EdgePLC BL235说明书V1.1-images/image76.png)
 
 ## 2.8 HDMI接口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image78.png"
-style="width:1.18611in;height:3.03611in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL235说明书V1.1-images/image78.png)
 
 HDMI接口如图所示。支持HDMI 1.4和HDMI
 2.0标准。系统默认支持的分辨率为1920x1080@60fps，最高支持HDMI显示分辨率为
@@ -2344,28 +2244,19 @@ HDMI接口如图所示。支持HDMI 1.4和HDMI
 
 ## 2.9 调试串口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image80.png"
-style="width:3.82361in;height:1.42708in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL235说明书V1.1-images/image80.png)
 
 调试接口如图。可通过该端口进入设备系统。
 
 ## 82.10 SIM卡插槽
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image81.png"
-style="width:3.44583in;height:1.28681in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL235说明书V1.1-images/image81.png)
 
 SIM卡槽如图所示。
 
 ## 2.11 SD卡插槽
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image82.png"
-style="width:3.41458in;height:1.27431in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL235说明书V1.1-images/image82.png)
 
 SD卡槽如图所示，支持FAT32格式SD卡，以sd卡烧录为例。
 
@@ -2373,9 +2264,7 @@ SD卡槽如图所示，支持FAT32格式SD卡，以sd卡烧录为例。
 
 fdisk -l
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image83.png"
-style="width:5.76181in;height:3.20903in" />
+![](EdgePLC BL235说明书V1.1-images/image83.png)
 
 2.  系统识别到存储介质包含两个有效大分区，后续读写性能测试将限定在SD卡路径下进行”，并且可直观读取到该存储设备的实际物理容量。
 
@@ -2383,9 +2272,7 @@ style="width:5.76181in;height:3.20903in" />
 
 blkid /dev/mmcblk1p3
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image85.png"
-style="width:5.76667in;height:0.54722in" />
+![](EdgePLC BL235说明书V1.1-images/image85.png)
 
 识别到为系统备份分区，可读写即可使用
 
@@ -2401,9 +2288,7 @@ fio --filename=/dev/mmcblk1p3 --ioengine=psync --rw=write --bs=1024k
 
 6.  可以看到工作状态下的（负载）写入的速度。
 
-    <img
-    src="EdgePLC BL235说明书V1.1-images/image87.png"
-    style="width:5.76528in;height:1.06528in" />
+    ![](EdgePLC BL235说明书V1.1-images/image87.png)
 
 7.  读取前需清除写入带来的缓存。
 
@@ -2417,9 +2302,7 @@ fio --filename=/dev/mmcblk1p3 --ioengine=psync --rw=read --bs=1024k
 
 9.  可以看到工作状态下读取的速度。
 
-    <img
-    src="EdgePLC BL235说明书V1.1-images/image89.png"
-    style="width:5.76736in;height:0.92292in" />
+    ![](EdgePLC BL235说明书V1.1-images/image89.png)
 
     A~F步骤都正常说明这个SD卡接口没有问题。
 
@@ -2429,10 +2312,7 @@ sync; echo 3 /| tee /proc/sys/vm/drop_caches
 
 ## 2.12 重启按钮
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image91.png"
-style="width:3.48681in;height:1.30139in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL235说明书V1.1-images/image91.png)
 
 重启按钮如图所示。按下松开后设备重启。
 
@@ -2450,32 +2330,24 @@ PCIE接口支持4G和Wi-Fi功能。
 
 ls /dev 看有没有ttyUSB开头的设备，没有就是没识别到模块
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image92.png"
-style="width:5.76528in;height:1.84931in" />
+![](EdgePLC BL235说明书V1.1-images/image92.png)
 
 stty -F /dev/ttyUSB1 ispeed 115200 ospeed 115200 cs8 raw -echo
 //设置串口
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image94.png"
-style="width:5.76458in;height:0.41806in" />
+![](EdgePLC BL235说明书V1.1-images/image94.png)
 
 查信号 20以上 ：
 
 cat /dev/ttyUSB1 & echo -e "AT+CSQ/r" /> /dev/ttyUSB1（输入1/2遍）
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image96.png"
-style="width:5.76667in;height:0.79792in" />
+![](EdgePLC BL235说明书V1.1-images/image96.png)
 
 查是4G模块否能正常和SIM卡通讯：
 
 echo -e "AT+CPIN?/r" /> /dev/ttyUSB1
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image98.png"
-style="width:5.7625in;height:0.73056in" />
+![](EdgePLC BL235说明书V1.1-images/image98.png)
 
 EC200还需加一条拨号指令
 
@@ -2485,9 +2357,7 @@ echo -e "AT+QNETDEVCTL=3,1,1/r" /> /dev/ttyUSB1
 
 echo -e "AT+COPS?/r" /> /dev/ttyUSB1
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image100.png"
-style="width:5.76667in;height:0.67569in" />
+![](EdgePLC BL235说明书V1.1-images/image100.png)
 
 然后输入
 
@@ -2505,9 +2375,7 @@ udhcpc: sending select for 192.168.43.100
 
 udhcpc: lease of 192.168.43.100 obtained, lease time 86400
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image102.png"
-style="width:5.76458in;height:0.72917in" />
+![](EdgePLC BL235说明书V1.1-images/image102.png)
 
 然后通过ping www.baidu.com /8.8.8.8-I usb0 测试上网。
 
@@ -2515,9 +2383,7 @@ Ping不通百度加以下指令
 
 echo "nameserver 8.8.8.8" /> /etc/resolv.conf
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image104.png"
-style="width:5.76181in;height:1.40069in" />
+![](EdgePLC BL235说明书V1.1-images/image104.png)
 
 （2）短信功能
 
@@ -2566,9 +2432,7 @@ style="width:5.76181in;height:1.40069in" />
 
 ifconfig
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image106.png"
-style="width:5.76042in;height:0.93056in" />
+![](EdgePLC BL235说明书V1.1-images/image106.png)
 
 进入测试程序目录下，关闭其他网络，仅保留Wi-Fi网络，加载Wi-Fi驱动。
 
@@ -2587,23 +2451,17 @@ ifconfig wlan0 up /#打开wlan0
 ./wifi_setup.sh -i bliiot -p bebetter
 /#连接Wi-Fi，-i后面接Wi-Fi名，-p后面接密码
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image108.png"
-style="width:5.76458in;height:1.43194in" />
+![](EdgePLC BL235说明书V1.1-images/image108.png)
 
 ifconfig /#查看wlan0有无IP
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image110.png"
-style="width:5.76389in;height:1.12917in" />
+![](EdgePLC BL235说明书V1.1-images/image110.png)
 
 最后ping百度测试：
 
 ping -4 www.baidu.com （百度域名不一定成功转IP，使用百度IP）
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image112.png"
-style="width:5.76181in;height:1.09583in" />
+![](EdgePLC BL235说明书V1.1-images/image112.png)
 
 （2）AP功能
 
@@ -2679,15 +2537,11 @@ option dns 8.8.8.8
 
 ./ap_setup.sh
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image114.png"
-style="width:5.76458in;height:2.01806in" />
+![](EdgePLC BL235说明书V1.1-images/image114.png)
 
 系统可能在启动时连接WiFi默认配置STA功能，需要在rc.local文件隐藏，通过reboot重启设备即可。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image116.png"
-style="width:5.76042in;height:0.59097in" />
+![](EdgePLC BL235说明书V1.1-images/image116.png)
 
 重新测试通过ps查看进程号杀掉udhcpd和hostapd旧进程即可
 
@@ -2695,9 +2549,7 @@ ps
 
 kill 1959 1960 2100 //对应两个程序进程号
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image117.png"
-style="width:5.76111in;height:1.02222in" />
+![](EdgePLC BL235说明书V1.1-images/image117.png)
 
 重新运行脚本
 
@@ -2781,9 +2633,7 @@ Contrast success
 进入此电脑——管理——设备管理器，打开端口，插入USB线到micro
 USB，此时刷新的端口即为连接设备的端口。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image118.png"
-style="width:3.62222in;height:2.76319in" />
+![](EdgePLC BL235说明书V1.1-images/image118.png)
 
 此处以SecureCRT为例，在软件中新建连接，选择串口登录，选择对应的端口，波特率115200，数据位8，校验位None，停止位1。点击connect即可进入设备。
 
@@ -2791,29 +2641,21 @@ style="width:3.62222in;height:2.76319in" />
 
 **Ubuntu系统默认登录账号：root 密码：root**
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image119.png"
-style="width:2.10625in;height:1.92083in" />
+![](EdgePLC BL235说明书V1.1-images/image119.png)
 
 ## 3.2 SSH2登录
 
 在使用网口登录前需设置对应网口的IP。此处以ETH2为例。此处ETH2已连接路由器，获取到的IP为192.168.2.107。电脑IP在2网段。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image120.png"
-style="width:4.06875in;height:2.46944in" />
+![](EdgePLC BL235说明书V1.1-images/image120.png)
 
 点击创建连接，选择协议为SSH2，主机名填写为设备IP：192.168.2.107，端口22，用户名root，点击Connect连接。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image121.png"
-style="width:2.83958in;height:2.64653in" />
+![](EdgePLC BL235说明书V1.1-images/image121.png)
 
 选择接受，即连接成功。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image122.png"
-style="width:3.92778in;height:1.66389in" />
+![](EdgePLC BL235说明书V1.1-images/image122.png)
 
 # 4.系统烧录
 
@@ -2821,9 +2663,7 @@ style="width:3.92778in;height:1.66389in" />
 
 修改系统启动方式，需要拆开设备的外壳，找到拨码开关。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image123.png"
-style="width:5.0625in;height:3.13403in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image123.png)
 
 ### 4.1.1 启动卡制作
 
@@ -2832,16 +2672,12 @@ style="width:5.0625in;height:3.13403in" alt="IMG_256" />
 将 Micro SD 卡通过读卡器连接至 PC 机，Ubuntu 系统识别后，一般会自动挂载
 Micro SD 卡分区，如下图所示。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image124.png"
-style="width:4.8in;height:4.09375in" />
+![](EdgePLC BL235说明书V1.1-images/image124.png)
 
 若 Ubuntu 系统未自动识别，请右击右下角的 USB
 大容量存储设备图标，再点击"Connect (Disconnect from Host)"进行识别。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image125.png"
-style="width:3.80208in;height:1.5625in" />
+![](EdgePLC BL235说明书V1.1-images/image125.png)
 
 若无以上图标或者连接不成功，请尝试如下方法：
 
@@ -2858,9 +2694,7 @@ style="width:3.80208in;height:1.5625in" />
 
 fdisk -l
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image126.png"
-style="width:5.76597in;height:1.93472in" />
+![](EdgePLC BL235说明书V1.1-images/image126.png)
 
 可看到 Micro SD 卡设备节点是"/dev/sdb"，并且有三个分区，分别为
 sdb1、sdb2 和sdb3
@@ -2877,9 +2711,7 @@ PV 工具。
 
 sudo apt-get install pv
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image127.png"
-style="width:5.75903in;height:2.1in" />
+![](EdgePLC BL235说明书V1.1-images/image127.png)
 
 4)  系统启动卡制作
 
@@ -2888,23 +2720,17 @@ style="width:5.75903in;height:2.1in" />
 
 sudo ./mksdboot.sh -d /dev/sdb
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image128.png"
-style="width:5.76667in;height:3.25417in" />
+![](EdgePLC BL235说明书V1.1-images/image128.png)
 
 根据提示按回车键，进行系统启动卡制作。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image129.png"
-style="width:5.76597in;height:4.97917in" />
+![](EdgePLC BL235说明书V1.1-images/image129.png)
 
 耗时约
 10~15min，系统启动卡制作完成。同时，终端将会打印提示信息，如下图所示。制作时间与系统大小、Micro
 SD 卡容量和接口性能有关。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image130.png"
-style="width:5.76667in;height:1.35625in" />
+![](EdgePLC BL235说明书V1.1-images/image130.png)
 
 重新将读卡器连接，执行如下命令，可看到新制作的系统启动卡共有
 BOOT、rootfs 和 rootfs-backup 三个分区。其中 BOOT 分区为 FAT32
@@ -2912,9 +2738,7 @@ BOOT、rootfs 和 rootfs-backup 三个分区。其中 BOOT 分区为 FAT32
 Windows 系统下可见，EXT4 格式分区在 Windows 系统 下不可见，三个分区在
 Linux 系统下均可见。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image131.png"
-style="width:5.76458in;height:0.67639in" />
+![](EdgePLC BL235说明书V1.1-images/image131.png)
 
 BOOT 分区：主要存放 U-Boot 启动镜像 u-boot.img、tiboot3.bin、tispl.bin
 等文件，从制卡工具包 boot
@@ -2930,9 +2754,7 @@ rootfs-backup
 host)"选项（如下图），断开 Micro SD 卡与 Ubuntu
 之间的连接，完成系统启动卡制作。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image132.png"
-style="width:2.82292in;height:0.98958in" />
+![](EdgePLC BL235说明书V1.1-images/image132.png)
 
 ### 4.1.2 从启动卡启动
 
@@ -2942,48 +2764,36 @@ style="width:2.82292in;height:0.98958in" />
 机，设备重新上电启动，串口调试终端会打印如下类似 启动信息。其中，mmc1
 表示从 MicroSD 卡启动。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image133.png"
-style="width:5.99514in;height:4.44028in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image133.png)
 
 内核启动打印信息如图所示，可以从打印信息中查看当前评估板型号。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image134.png"
-style="width:6.28194in;height:4.59375in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image134.png)
 
 系统启动后，会自动登录 root
 用户，串口调试终端将会打印如下类似信息，说明使
 用系统启动卡启动设备成功。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image135.png"
-style="width:6.04931in;height:2.26458in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image135.png)
 
 查看当前 Linux 内核版本信息。
 
 cat /proc/version
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image136.png"
-style="width:5.95972in;height:0.43958in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image136.png)
 
 ### 4.1.3 将系统固化到eMMC
 
 系统启动卡制作时，已将固化系统的脚本文件 mkemmcboot.sh
 拷贝至系统启动卡文 件系统的"/opt/tools/"目录下。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image137.png"
-style="width:4.6875in;height:0.6875in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image137.png)
 
 执行如下指令将系统固化到eMMC中：
 
 /opt/tools/mkemmcboot.sh
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image138.png"
-style="width:5.825in;height:6.47917in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image138.png)
 
 整个过程耗时约 5~10min，成功固化 Debian 系统至
 eMMC。脚本文件将会进行如下操作：
@@ -3000,9 +2810,7 @@ eMMC。脚本文件将会进行如下操作：
 
 至此系统固化完成，从eMMC启动需要先将设备断电，再将拨码开关改成00001000(1~8)，然后重新上电。如果系统显示为mmc0表示已经正常eMMC启动。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image139.png"
-style="width:5.83264in;height:4.28125in" alt="IMG_256" />
+![IMG_256](EdgePLC BL235说明书V1.1-images/image139.png)
 
 <table>
 <colgroup>
@@ -3073,20 +2881,11 @@ style="width:5.83264in;height:4.28125in" alt="IMG_256" />
 
 配备导轨卡扣分为下段式短款导轨结构。此设计预留了充足的螺丝锁付空间，便于用户进行安装操作。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image140.png"
-style="width:1.42569in;height:2.77153in"
-alt="8aec9eb215acbbce3b8954b2e1062111_compress" /><img
-src="EdgePLC BL235说明书V1.1-images/image141.png"
-style="width:1.41389in;height:2.76042in"
-alt="8aec9eb215acbbce3b8954b2e1062111_compress" />
+![8aec9eb215acbbce3b8954b2e1062111_compress](EdgePLC BL235说明书V1.1-images/image140.png)![8aec9eb215acbbce3b8954b2e1062111_compress](EdgePLC BL235说明书V1.1-images/image141.png)
 
 将卡扣垂直向下按压，直至其完全嵌入并锁定于导轨底部，即可完成安装。长导轨卡无需额外卡扣，因其内部已预设专用凹槽结构，可直接实现稳固连接。
 
-<img
-src="EdgePLC BL235说明书V1.1-images/image142.png"
-style="width:0.83611in;height:1.94236in"
-alt="ac31d771be6b72005cba9ec2e46da2bc_compress" />
+![ac31d771be6b72005cba9ec2e46da2bc_compress](EdgePLC BL235说明书V1.1-images/image142.png)
 
 # 6.软件支持
 

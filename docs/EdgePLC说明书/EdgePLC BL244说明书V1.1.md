@@ -1,22 +1,23 @@
-<figure>
-<img
-src="EdgePLC BL244说明书V1.1-images/image2.jpeg"
-style="width:2.97639in;height:3.98056in" alt="EdgePLC A款 (2)" />
-<figcaption><p>版本：V1.1<br />
-日期：2026-09-10<br />
-版权：<strong>深圳市钡铼技术有限公司<br />
-</strong>网址：<a
-href="http://www.bliiot.cn">www.bliiot.cn</a></p></figcaption>
-</figure>
+
+
+![EdgePLC A款 (2)](EdgePLC BL244说明书V1.1-images/image2.jpeg)
+
+版本：V1.1
+日期：2026-09-10
+版权：**深圳市钡铼技术有限公司
+**网址：[www.bliiot.cn](http://www.bliiot.cn)
+
+
 
 EdgePLC BL244系列
 
-<figure>
-<img
-src="EdgePLC BL244说明书V1.1-images/image1.png"
-style="width:2.68681in;height:1.89653in" />
-<figcaption><p>说明书</p></figcaption>
-</figure>
+
+
+![](EdgePLC BL244说明书V1.1-images/image1.png)
+
+说明书
+
+
 
 EdgePLC BL244工业AI边缘控制器
 
@@ -98,13 +99,7 @@ BL244系列工业AI边缘控制器专为智能产线控制、储能EMS、光伏�
 
 产品外观结构与尺寸如下图：
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image4.png"
-style="width:2.29236in;height:2.85556in"
-alt="F:/2025_9/EdgePLC/标签外壳/标准款清晰图片.png标准款清晰图片" /><img
-src="EdgePLC BL244说明书V1.1-images/image5.png"
-style="width:2.30972in;height:2.87986in"
-alt="F:/2025_9/EdgePLC/标签外壳/A款清晰图片.pngA款清晰图片" />
+![F:/2025_9/EdgePLC/标签外壳/标准款清晰图片.png标准款清晰图片](EdgePLC BL244说明书V1.1-images/image4.png)![F:/2025_9/EdgePLC/标签外壳/A款清晰图片.pngA款清晰图片](EdgePLC BL244说明书V1.1-images/image5.png)
 
 ## 1.3 技术参数
 
@@ -638,11 +633,7 @@ style="text-align: center;"><strong>X系列IO板选型表</strong></td>
 
 ## 2.1 N板介绍
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image6.png"
-style="width:3.14375in;height:1.87847in" alt="EdgePLC A款 (10)" /><img
-src="EdgePLC BL244说明书V1.1-images/image7.png"
-style="width:2.56042in;height:2.56042in" />
+![EdgePLC A款 (10)](EdgePLC BL244说明书V1.1-images/image6.png)![](EdgePLC BL244说明书V1.1-images/image7.png)
 
 工业自动化控制系统中常见的分布式I/O模块，例如：右侧具体为32通道数字量输入模块，型号为N1321(NPN)。这类模块通常用于连接现场的传感器、按钮、限位开关等设备，将物理信号转换为PLC（可编程逻辑控制器）可识别的数字信号。
 
@@ -678,10 +669,7 @@ NPN输入特性：适用于连接NPN型传感器，这类传感器在工业现�
 
 ## 2.2 电源接口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image8.png"
-style="width:2.57639in;height:1.04931in"
-alt="e2c8802fdadeb1e5530381aefa943291_origin(1)" />。
+![e2c8802fdadeb1e5530381aefa943291_origin(1)](EdgePLC BL244说明书V1.1-images/image8.png)。
 
 设备提供1路输入。支持DC12~24V输入，支持反接防护
 
@@ -1890,21 +1878,15 @@ cat /dev/ttyS1 //等待查看接收到的数据
 
 串口助手收到数据
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image9.png"
-style="width:5.77153in;height:0.22708in" />
+![](EdgePLC BL244说明书V1.1-images/image9.png)
 
 串口助手发送数据
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image10.png"
-style="width:5.77153in;height:0.52986in" />
+![](EdgePLC BL244说明书V1.1-images/image10.png)
 
 终端界面收到数据
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image11.png"
-style="width:5.76736in;height:0.50347in" />
+![](EdgePLC BL244说明书V1.1-images/image11.png)
 
 按“Ctrl+C”停止。
 
@@ -1920,9 +1902,7 @@ can-utils 工具的安装：
 
 root@bliiot:~# apt install can-utils
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image12.png"
-style="width:5.76319in;height:1.77986in" />
+![](EdgePLC BL244说明书V1.1-images/image12.png)
 
 在进行任何参数配置前，必须先关闭接口，否则配置将无法生效，配置 CAN0
 的仲裁域波特率为 1000000，数据域波特率为 5000000，并强制开启 FD
@@ -1935,32 +1915,24 @@ root@bliiot:~# ip link set can0 type can bitrate 1000000 dbitrate
 
 root@bliiot:~# ip link set can0 up
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image13.png"
-style="width:5.76319in;height:1.70972in" />
+![](EdgePLC BL244说明书V1.1-images/image13.png)
 
 使用 cansend 命令向指定 ID 发送数据。以下示例向 ID 为 543 的节点发送 8
 字节数据（00 01 02 03 04 05 06 07），其中000代表一位标识符和两位数据位：
 
 root@bliiot:~# cansend can0 543##000.01.02.03.04.05.06.07
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image15.png"
-style="width:5.76319in;height:0.39653in" />
+![](EdgePLC BL244说明书V1.1-images/image15.png)
 
 GCAN Tools工具收到数据
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image16.png"
-style="width:5.76181in;height:0.25694in" />
+![](EdgePLC BL244说明书V1.1-images/image16.png)
 
 使用 candump 命令实时监听并打印 can0 接口接收到的所有数据：
 
 root@bliiot:~# candump can0
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image18.png"
-style="width:5.76389in;height:0.34514in" />
+![](EdgePLC BL244说明书V1.1-images/image18.png)
 
 若CAN0接收正常，用其它设备发送该数据则应收到
 
@@ -1968,19 +1940,13 @@ root@bliiot:~# candump can0
 
 can0 000 /[8/] 11 22 33 44 55 66 77 88
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image20.png"
-style="width:5.76458in;height:0.45417in" />
+![](EdgePLC BL244说明书V1.1-images/image20.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image21.png"
-style="width:5.76111in;height:0.51181in" />
+![](EdgePLC BL244说明书V1.1-images/image21.png)
 
 扩展帧类似：
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image22.png"
-style="width:5.76736in;height:0.33611in" />
+![](EdgePLC BL244说明书V1.1-images/image22.png)
 
 2)  CAN-2.0B
 
@@ -1999,23 +1965,17 @@ root@bliiot:~# ip link set can0 up
 
 root@bliiot:~# cansend can0 1FFFFFFF#AABBCCDDEEFF1122
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image23.png"
-style="width:5.76181in;height:0.35486in" />
+![](EdgePLC BL244说明书V1.1-images/image23.png)
 
 GCAN Tools工具收到数据
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image24.png"
-style="width:5.76458in;height:0.37639in" />
+![](EdgePLC BL244说明书V1.1-images/image24.png)
 
 使用 candump 命令实时监听并打印 can0 接口接收到的所有数据：
 
 root@bliiot:~# candump can0
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image18.png"
-style="width:5.76389in;height:0.34514in" />
+![](EdgePLC BL244说明书V1.1-images/image18.png)
 
 若CAN0接收正常，用其它设备发送该数据则应收到
 
@@ -2023,11 +1983,7 @@ root@bliiot:~# candump can0
 
 can0 1FFFFFFF /[8/] AA BB CC DD EE FF 11 22
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image25.png"
-style="width:5.7625in;height:0.45347in" /><img
-src="EdgePLC BL244说明书V1.1-images/image26.png"
-style="width:5.76111in;height:0.49375in" />
+![](EdgePLC BL244说明书V1.1-images/image25.png)![](EdgePLC BL244说明书V1.1-images/image26.png)
 
 ### 2.3.12 N板端口使用
 
@@ -2037,19 +1993,13 @@ style="width:5.76111in;height:0.49375in" />
 
 插上网线写入ifconfig指令获取IP，通过SSH登录
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image27.png"
-style="width:5.76319in;height:1.03264in" />
+![](EdgePLC BL244说明书V1.1-images/image27.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image29.png"
-style="width:5.75903in;height:3.78958in" />
+![](EdgePLC BL244说明书V1.1-images/image29.png)
 
 通过左边文件夹页面在usr/demo/文件夹下，新建ion文件夹，把N板识别文件复制进去
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image31.png"
-style="width:5.76319in;height:1.55833in" />
+![](EdgePLC BL244说明书V1.1-images/image31.png)
 
 对BEILAI_N_PLC_244_V1.0_20260522.bin执行chmod +x
 BEILAI_N_PLC_244_V1.0_20260522.bin。然后安装软件。
@@ -2079,13 +2029,9 @@ root@bliiot:/# ion help
 
 输入ion show查看信息。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image33.png"
-style="width:5.76181in;height:0.86042in" />
+![](EdgePLC BL244说明书V1.1-images/image33.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image34.png"
-style="width:5.76667in;height:2.14097in" />
+![](EdgePLC BL244说明书V1.1-images/image34.png)
 
 也可通过get命令获取通道值：
 
@@ -2093,17 +2039,13 @@ root@bliiot:/# ion get 1014 //通过address查看
 
 address 1014 value 0
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image35.png"
-style="width:5.76111in;height:0.25764in" />
+![](EdgePLC BL244说明书V1.1-images/image35.png)
 
 root@bliiot:/# ion set 1000 10 //通过address设置输出10
 
 root@bliiot:/# ion get 1000 //通过address查看
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image36.png"
-style="width:5.76458in;height:0.50347in" />
+![](EdgePLC BL244说明书V1.1-images/image36.png)
 
 设置通道值有信号量会亮灯
 
@@ -2122,9 +2064,7 @@ DI 输入端子。
 
 PNP型则公共端接负极，输入端子接正极。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image37.png"
-style="width:5.76042in;height:3.86181in" />
+![](EdgePLC BL244说明书V1.1-images/image37.png)
 
 通过get命令获取通道值以及ion show查看信息
 
@@ -2132,15 +2072,11 @@ root@bliiot:/# ion get 2014 //通过address查看
 
 address 2014 value 0
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image38.png"
-style="width:5.76597in;height:0.24722in" />
+![](EdgePLC BL244说明书V1.1-images/image38.png)
 
 将DI15（即为15通道）短接
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image39.png"
-style="width:5.76806in;height:3.69583in" />
+![](EdgePLC BL244说明书V1.1-images/image39.png)
 
 观察N板灯亮情况，对应DI短接形成回路灯亮。对应的N1162、N1161、N1322类似。
 
@@ -2153,9 +2089,7 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image40.png"
-style="width:5.76528in;height:1.20625in" />
+![](EdgePLC BL244说明书V1.1-images/image40.png)
 
 也可通过get命令获取通道值：
 
@@ -2163,25 +2097,19 @@ root@bliiot:/# ion get 4000 //通过address查看
 
 address 4000 value 0
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image41.png"
-style="width:5.7625in;height:0.27014in" />
+![](EdgePLC BL244说明书V1.1-images/image41.png)
 
 root@bliiot:/# ion set 4000 10 //通过address设置输出10mA
 
 root@bliiot:/# ion get 4000 //通过address查看
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image42.png"
-style="width:5.76319in;height:0.49167in" />
+![](EdgePLC BL244说明书V1.1-images/image42.png)
 
 通过高精度万用表直流电流档查看实际值与设置值是否相符,若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
 对应的N4086差分输出电压类似。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image43.png"
-style="width:5.76389in;height:1.35208in" />
+![](EdgePLC BL244说明书V1.1-images/image43.png)
 
 4.  **AI使用**
 
@@ -2190,9 +2118,7 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image44.png"
-style="width:5.76736in;height:1.20139in" />
+![](EdgePLC BL244说明书V1.1-images/image44.png)
 
 使用信号发生器输出目标电流值，观察实际值是否与输入值保持一致，如对第一个通道输出20mA,通过ion
 show查看数值，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
@@ -2201,15 +2127,11 @@ show查看数值，若显示值与理论值的偏差在允许误差范围内，�
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image45.png"
-style="width:5.76528in;height:1.35903in" />
+![](EdgePLC BL244说明书V1.1-images/image45.png)
 
 对应的N3083单端输入电压类似。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image46.png"
-style="width:5.76319in;height:1.34583in" />
+![](EdgePLC BL244说明书V1.1-images/image46.png)
 
 5.  **RTD使用**
 
@@ -2218,25 +2140,17 @@ show查看信息。
 
 root@bliiot:/# ion show
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image47.png"
-style="width:5.7625in;height:0.87431in" />
+![](EdgePLC BL244说明书V1.1-images/image47.png)
 
 使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
 对应的N5042、N5043、 N5044类似。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image48.png"
-style="width:5.76597in;height:0.79583in" />
+![](EdgePLC BL244说明书V1.1-images/image48.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image49.png"
-style="width:5.7625in;height:0.73681in" />
+![](EdgePLC BL244说明书V1.1-images/image49.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image50.png"
-style="width:5.76597in;height:0.99028in" />
+![](EdgePLC BL244说明书V1.1-images/image50.png)
 
 6.  **NTC使用**
 
@@ -2247,25 +2161,19 @@ root@bliiot:/# ion show
 
 使用电阻箱设置阻值对应温度值改变到合适的范围，若显示值与理论值的偏差在允许误差范围内，即视为校准通过。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image51.png"
-style="width:5.76458in;height:1.49444in" />
+![](EdgePLC BL244说明书V1.1-images/image51.png)
 
 3)  **量程模式修改**
 
 通过ion help命令，可以看到config的命令格式。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image52.png"
-style="width:5.7625in;height:0.82847in" />
+![](EdgePLC BL244说明书V1.1-images/image52.png)
 
 在终端中执行以下命令，以获取设备当前的运行状态及模式设置指令：
 
 root@bliiot:/# ion getmode
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image53.png"
-style="width:5.76319in;height:0.66944in" />
+![](EdgePLC BL244说明书V1.1-images/image53.png)
 
 确认目标模式对应的数值后，使用以下命令进行模式切换：例如将N4081的量程设置为4~20MA。
 
@@ -2303,9 +2211,7 @@ root@bliiot:/# ion setmode 4 4
 </tbody>
 </table>
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image54.jpeg"
-style="width:1.36319in;height:3.39514in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL244说明书V1.1-images/image54.jpeg)
 
 LED指示灯如图,从左至右的顺序为LED2、LED1、LED0。其中LED2为POWER指示灯，上电后电源正常时常亮；LED1为RUN灯，系统正常运行时闪烁；LED0为LINK灯，使用有线网络连接互联网时常亮，4G或Wi-Fi时闪烁。文件为/etc/beilai_led.sh。
 
@@ -2330,9 +2236,7 @@ root@bliiot:~# echo 1 />/sys/class/leds/user-led0/brightness
 
 ## 2.5 网络接口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image55.png"
-style="width:1.02847in;height:2.53819in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL244说明书V1.1-images/image55.png)
 
 如图所示，设备配备了两个千兆网口ETH1、ETH2，一个百兆网口ETH3
 
@@ -2340,9 +2244,7 @@ style="width:1.02847in;height:2.53819in" alt="EdgePLC A款 (1)" />
 
 root@BL244:~# ifconfig
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image56.png"
-style="width:5.76806in;height:3.09931in" />
+![](EdgePLC BL244说明书V1.1-images/image56.png)
 
 此时ETH2应显示为设定的静态IP地址192.168.1.167。
 
@@ -2354,17 +2256,13 @@ style="width:5.76806in;height:3.09931in" />
 
 ping百度：ping 8.8.8.8 ，Ctrl+c结束
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image57.png"
-style="width:5.7625in;height:1.22847in" />
+![](EdgePLC BL244说明书V1.1-images/image57.png)
 
 此时LINK灯亮。
 
 ## 2.6 USB接口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image58.png"
-style="width:1.44722in;height:3.39167in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL244说明书V1.1-images/image58.png)
 
 如图，设备带有2个USB2.0 HOST接口。支持FAT32格式U盘。
 
@@ -2378,9 +2276,7 @@ lsblk
 
 2.  可以看到sdb1，并且能够看到实际的内存大小
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image59.png"
-style="width:5.7625in;height:0.45208in" />
+![](EdgePLC BL244说明书V1.1-images/image59.png)
 
 3.  安装fio工具
 
@@ -2397,9 +2293,7 @@ fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 
 5.  可以看到写入的速度。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image60.png"
-style="width:5.76597in;height:0.69097in" />
+![](EdgePLC BL244说明书V1.1-images/image60.png)
 
 6.  再输入以下指令测试读取：
 
@@ -2410,9 +2304,7 @@ fio -filename=/dev/sda1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 
 7.  可以看到读取的速度。
 
-    <img
-    src="EdgePLC BL244说明书V1.1-images/image61.png"
-    style="width:5.76806in;height:0.64167in" />
+    ![](EdgePLC BL244说明书V1.1-images/image61.png)
 
 8.  说明这个USB接口没有问题。
 
@@ -2423,15 +2315,11 @@ ps aux /| grep fio //检查是否有残留进程，必要时用 kill
 
 10. 重复B~F操作，没有问题说明USB端口正常。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image62.png"
-style="width:5.76806in;height:0.44514in" />
+![](EdgePLC BL244说明书V1.1-images/image62.png)
 
 ## 2.7 HDMI接口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image63.png"
-style="width:1.18611in;height:3.03611in" alt="EdgePLC A款 (1)" />
+![EdgePLC A款 (1)](EdgePLC BL244说明书V1.1-images/image63.png)
 
 HDMI接口如图所示。支持HDMI 1.4和HDMI
 2.0标准。系统默认支持的分辨率为1920x1080@60fps，最高支持HDMI显示分辨率为
@@ -2439,34 +2327,23 @@ HDMI接口如图所示。支持HDMI 1.4和HDMI
 
 将HDMI连接设备和显示器，此时显示器应显示桌面系统。若没有显示可尝试重启设备。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image64.png"
-style="width:4.51528in;height:2.75833in" />
+![](EdgePLC BL244说明书V1.1-images/image64.png)
 
 ## 2.8 调试串口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image65.png"
-style="width:3.82361in;height:1.42708in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL244说明书V1.1-images/image65.png)
 
 调试接口如图。可通过该端口进入设备系统。
 
 ## 2.9 SIM卡插槽
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image66.png"
-style="width:3.44583in;height:1.28681in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL244说明书V1.1-images/image66.png)
 
 SIM卡槽如图所示。
 
 ## 2.10 SD卡插槽
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image67.png"
-style="width:3.41458in;height:1.27431in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL244说明书V1.1-images/image67.png)
 
 SD卡槽如图所示，支持FAT32格式SD卡，以sd卡烧录为例。
 
@@ -2474,9 +2351,7 @@ SD卡槽如图所示，支持FAT32格式SD卡，以sd卡烧录为例。
 
 fdisk -l
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image68.png"
-style="width:5.76667in;height:3.21111in" />
+![](EdgePLC BL244说明书V1.1-images/image68.png)
 
 2.  系统识别到存储介质包含两个有效大分区，后续读写性能测试将限定在SD卡路径下进行”，并且可直观读取到该存储设备的实际物理容量。
 
@@ -2492,9 +2367,7 @@ fio --filename=/dev/mmcblk1p8 --ioengine=psync --rw=write --bs=1024k
 
 5.  可以看到工作状态下的（负载）写入的速度。
 
-    <img
-    src="EdgePLC BL244说明书V1.1-images/image69.png"
-    style="width:5.76319in;height:0.73264in" />
+    ![](EdgePLC BL244说明书V1.1-images/image69.png)
 
 6.  读取前需清除写入带来的缓存。
 
@@ -2508,9 +2381,7 @@ fio --filename=/dev/mmcblk1p8 --ioengine=psync --rw=read --bs=1024k
 
 8.  可以看到工作状态下读取的速度。
 
-    <img
-    src="EdgePLC BL244说明书V1.1-images/image70.png"
-    style="width:5.76667in;height:0.78611in" />
+    ![](EdgePLC BL244说明书V1.1-images/image70.png)
 
     A~F步骤都正常说明这个SD卡接口没有问题。
 
@@ -2520,10 +2391,7 @@ sync; echo 3 /| tee /proc/sys/vm/drop_caches
 
 ## 2.11 重启按钮
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image71.png"
-style="width:3.48681in;height:1.30139in"
-alt="c8c1b31cf4c96155d490e919f7fb7263_compress" />
+![c8c1b31cf4c96155d490e919f7fb7263_compress](EdgePLC BL244说明书V1.1-images/image71.png)
 
 重启按钮如图所示。按下松开后设备重启。
 
@@ -2541,32 +2409,24 @@ PCIE接口支持4G和Wi-Fi功能。
 
 ls /dev 看有没有ttyUSB开头的设备，没有就是没识别到模块
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image72.png"
-style="width:5.76181in;height:0.36319in" />
+![](EdgePLC BL244说明书V1.1-images/image72.png)
 
 stty -F /dev/ttyUSB1 ispeed 115200 ospeed 115200 cs8 raw -echo
 //设置串口
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image73.png"
-style="width:5.76736in;height:0.20833in" />
+![](EdgePLC BL244说明书V1.1-images/image73.png)
 
 查信号 20以上 ：
 
 cat /dev/ttyUSB1 & echo -e "AT+CSQ/r" /> /dev/ttyUSB1（输入1/2遍）
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image74.png"
-style="width:5.76389in;height:0.56806in" />
+![](EdgePLC BL244说明书V1.1-images/image74.png)
 
 查是4G模块否能正常和SIM卡通讯：
 
 echo -e "AT+CPIN?/r" /> /dev/ttyUSB1
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image75.png"
-style="width:5.76597in;height:0.46528in" />
+![](EdgePLC BL244说明书V1.1-images/image75.png)
 
 EC200还需加一条拨号指令
 
@@ -2576,9 +2436,7 @@ echo -e "AT+QNETDEVCTL=3,1,1/r" /> /dev/ttyUSB1
 
 echo -e "AT+COPS?/r" /> /dev/ttyUSB1
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image76.png"
-style="width:5.76181in;height:0.46111in" />
+![](EdgePLC BL244说明书V1.1-images/image76.png)
 
 然后输入
 
@@ -2596,9 +2454,7 @@ udhcpc: sending select for 192.168.43.100
 
 udhcpc: lease of 192.168.43.100 obtained, lease time 86400
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image77.png"
-style="width:5.76736in;height:0.6375in" />
+![](EdgePLC BL244说明书V1.1-images/image77.png)
 
 然后通过ping www.baidu.com /8.8.8.8-I usb0 测试上网。
 
@@ -2606,9 +2462,7 @@ Ping不通百度加以下指令
 
 echo "nameserver 8.8.8.8" /> /etc/resolv.conf
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image78.png"
-style="width:5.76806in;height:0.99653in" />
+![](EdgePLC BL244说明书V1.1-images/image78.png)
 
 （2）短信功能
 
@@ -2657,9 +2511,7 @@ style="width:5.76806in;height:0.99653in" />
 
 lsmod
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image79.png"
-style="width:5.76597in;height:0.45347in" />
+![](EdgePLC BL244说明书V1.1-images/image79.png)
 
 进入测试程序目录下，关闭其他网络，仅保留Wi-Fi网络，加载Wi-Fi驱动。
 
@@ -2680,23 +2532,17 @@ ifconfig wlan0 up /#打开wlan0
 ./wifi_setup.sh -i bliiot -p bebetter
 /#连接Wi-Fi，-i后面接Wi-Fi名，-p后面接密码
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image80.png"
-style="width:5.75972in;height:2.34583in" />
+![](EdgePLC BL244说明书V1.1-images/image80.png)
 
 ifconfig /#查看wlan0有无IP
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image81.png"
-style="width:5.76181in;height:0.70278in" />
+![](EdgePLC BL244说明书V1.1-images/image81.png)
 
 最后ping百度测试：
 
 ping www.baidu.com （百度域名不一定成功转IP，使用百度IP）
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image82.png"
-style="width:5.7625in;height:0.95833in" />
+![](EdgePLC BL244说明书V1.1-images/image82.png)
 
 （2）AP功能
 
@@ -2727,9 +2573,7 @@ nano rtl_hostapd_2G.conf
 
 lsblk -l
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image83.png"
-style="width:5.76181in;height:0.44514in" />
+![](EdgePLC BL244说明书V1.1-images/image83.png)
 
 2.  测试前需要保证固态硬盘不是已经挂载的状态，为保证固态硬盘没有被挂载，所以执行卸载指令：
 
@@ -2742,9 +2586,7 @@ fio -filename=/dev/nvme0n1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 -size=1G -numjobs=1 -thread -group_reporting -name=write_job
 -ramp_time=1
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image84.png"
-style="width:5.76458in;height:0.54306in" />
+![](EdgePLC BL244说明书V1.1-images/image84.png)
 
 4.  观察输出结果中的 WRITE 行，查看带宽（bw）数值，通常 NVMe
     固态硬盘写入速度应在 数百 MB/s
@@ -2756,9 +2598,7 @@ fio -filename=/dev/nvme0n1 -ioengine=psync -iodepth=1 -iodepth_batch=1
 -iodepth_low=1 -iodepth_batch_complete=1 -direct=1 -rw=read -bs=1024K
 -size=5G -numjobs=1 -thread -group_reporting -name=read_job -ramp_time=1
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image85.png"
-style="width:5.76111in;height:0.61667in" />
+![](EdgePLC BL244说明书V1.1-images/image85.png)
 
 6.  观察输出结果中的 READ
     行，查看带宽（bw）数值。若无报错且有速度数据输出，说明读取功能正常。则硬盘本身功能正常。
@@ -2841,9 +2681,7 @@ Contrast success
 进入此电脑——管理——设备管理器，打开端口，插入USB线到micro
 USB，此时刷新的端口即为连接设备的端口。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image86.png"
-style="width:3.62222in;height:2.76319in" />
+![](EdgePLC BL244说明书V1.1-images/image86.png)
 
 此处以SecureCRT为例，在软件中新建连接，选择串口登录，选择对应的端口，波特率115200，数据位8，校验位None，停止位1。点击connect即可进入设备。
 
@@ -2851,29 +2689,21 @@ style="width:3.62222in;height:2.76319in" />
 
 **Ubuntu系统默认登录账号：root 密码：root**
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image87.png"
-style="width:2.10625in;height:1.92083in" />
+![](EdgePLC BL244说明书V1.1-images/image87.png)
 
 ## 3.2 SSH2登录
 
 在使用网口登录前需设置对应网口的IP。此处以ETH2为例。此处ETH2已连接路由器，获取到的IP为192.168.2.107。电脑IP在2网段。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image88.png"
-style="width:4.06875in;height:2.46944in" />
+![](EdgePLC BL244说明书V1.1-images/image88.png)
 
 点击创建连接，选择协议为SSH2，主机名填写为设备IP：192.168.2.107，端口22，用户名root，点击Connect连接。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image89.png"
-style="width:2.83958in;height:2.64653in" />
+![](EdgePLC BL244说明书V1.1-images/image89.png)
 
 选择接受，即连接成功。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image90.png"
-style="width:3.92778in;height:1.66389in" />
+![](EdgePLC BL244说明书V1.1-images/image90.png)
 
 # 4.系统烧录
 
@@ -2883,64 +2713,42 @@ style="width:3.92778in;height:1.66389in" />
 
 由于BL244的镜像所需内存通常会大于4GB，所以在制作启动卡时需要将内存卡格式化为NTFS格式，并编辑“config.ini”文件。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image91.png"
-style="width:5.3125in;height:2.23958in" alt="IMG_256" />
+![IMG_256](EdgePLC BL244说明书V1.1-images/image91.png)
 
 找到“System”项中添加“USER_DISK_FS=NTFS”内容，否则会导致烧录失败。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image92.png"
-style="width:2.77083in;height:2.17917in" alt="IMG_256" />
+![IMG_256](EdgePLC BL244说明书V1.1-images/image92.png)
 
 将空白Micro
 SD卡连接至电脑，打开“SDDiskTool_v1.69”文件夹，右键"SD_Firmware_Tool.exe"点击“以管理员身份运行(A)”。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image93.png"
-style="width:5.76667in;height:1.82431in" />
+![](EdgePLC BL244说明书V1.1-images/image93.png)
 
 在“第一步：选择可移动设备”中选择可移动磁盘设备，然后点击“恢复磁盘”进行格式化，如下图所示。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image94.png"
-style="width:3.15486in;height:2.68403in" />
+![](EdgePLC BL244说明书V1.1-images/image94.png)
 
 请确认所选的可移动磁盘设备无误，在弹出窗口中点击“是(Y)”进行格式化。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image95.png"
-style="width:2.46736in;height:1.34028in" />
+![](EdgePLC BL244说明书V1.1-images/image95.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image96.png"
-style="width:3.3in;height:2.81111in" />
+![](EdgePLC BL244说明书V1.1-images/image96.png)
 
 等待格式化完成后，在弹出窗口中点击“确定”。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image97.png"
-style="width:1.8125in;height:1.71875in" />
+![](EdgePLC BL244说明书V1.1-images/image97.png)
 
 勾选“SD启动”选项，点击“选择固件”选择目标系统镜像文件，点击“开始创建”，在弹出窗口中点击“是(Y)”，制作SD启动卡。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image98.png"
-style="width:2.90486in;height:2.4875in" />
+![](EdgePLC BL244说明书V1.1-images/image98.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image99.png"
-style="width:3.36458in;height:1.72917in" />
+![](EdgePLC BL244说明书V1.1-images/image99.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image100.png"
-style="width:4.94792in;height:4.20833in" />
+![](EdgePLC BL244说明书V1.1-images/image100.png)
 
 在弹出的窗口中点击“确定”，此时 SD 启动卡制作完成。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image101.png"
-style="width:2.00833in;height:1.69167in" />
+![](EdgePLC BL244说明书V1.1-images/image101.png)
 
 ### 4.1.2 从启动卡启动
 
@@ -2948,9 +2756,7 @@ style="width:2.00833in;height:1.69167in" />
 SD卡槽，然后将设备上电，系统将从启动卡启动后自动登录root用户，串口调试终端会打印如下类似启动信息。"Bootdev(atags):
 mmc 1"表示从Micro SD卡启动。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image102.png"
-style="width:5.76111in;height:2.53333in" />
+![](EdgePLC BL244说明书V1.1-images/image102.png)
 
 ## 4.2 EMMC启动
 
@@ -2963,106 +2769,69 @@ style="width:5.76111in;height:2.53333in" />
 将空白Micro
 SD卡连接至电脑，打开“SDDiskTool_v1.69”文件夹，右键"SD_Firmware_Tool.exe"点击“以管理员身份运行(A)”。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image93.png"
-style="width:5.76667in;height:1.82431in" />
+![](EdgePLC BL244说明书V1.1-images/image93.png)
 
 工具运行后会自动识别接入到PC端的Micro SD卡，如下图所示。
 
 在“第一步：选择可移动设备”中选择可移动磁盘设备，然后点击“恢复磁盘”进行格式化，如下图所示。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image103.png"
-style="width:2.89167in;height:2.46389in" />
+![](EdgePLC BL244说明书V1.1-images/image103.png)
 
 请确认所选的可移动磁盘设备无误，在弹出窗口中点击“是(Y)”进行格式化。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image95.png"
-style="width:2.46736in;height:1.34028in" />
+![](EdgePLC BL244说明书V1.1-images/image95.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image104.png"
-style="width:2.73542in;height:2.34375in" />
+![](EdgePLC BL244说明书V1.1-images/image104.png)
 
 等待格式化完成后，在弹出窗口中点击“确定”。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image97.png"
-style="width:1.8125in;height:1.71875in" />
+![](EdgePLC BL244说明书V1.1-images/image97.png)
 
 勾选“固件升级”选项，点击“选择固件”选择目标系统镜像文件，点击“开始创建”，在弹出窗口中点击“是(Y)”，制作SD启动卡。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image105.png"
-style="width:2.87639in;height:2.47222in" />
+![](EdgePLC BL244说明书V1.1-images/image105.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image106.png"
-style="width:2.80139in;height:2.39722in" />
+![](EdgePLC BL244说明书V1.1-images/image106.png)
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image107.png"
-style="width:3.08889in;height:2.6375in" />
+![](EdgePLC BL244说明书V1.1-images/image107.png)
 
 点击“是”。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image108.png"
-style="width:3.08542in;height:2.60833in" />
+![](EdgePLC BL244说明书V1.1-images/image108.png)
 
 开始烧写系统。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image109.png"
-style="width:2.95556in;height:2.53403in" />
+![](EdgePLC BL244说明书V1.1-images/image109.png)
 
 提示创建成功。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image110.png"
-style="width:2.98472in;height:2.52014in" />
+![](EdgePLC BL244说明书V1.1-images/image110.png)
 
 ### 4.2.2 系统烧录
 
 将制作好的SD卡插至设备Micro
 SD卡槽，上电后将从SD卡启动，并自动固化系统至eMMC中。等待约5分钟。当系统固化完成后，设备将自动掉电。串口打印如下。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image111.png"
-style="width:5.76111in;height:2.29306in" />
+![](EdgePLC BL244说明书V1.1-images/image111.png)
 
 若为Ubuntu20.04系统则会弹出下图：
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image112.png"
-style="width:5.10903in;height:2.59514in" />
+![](EdgePLC BL244说明书V1.1-images/image112.png)
 
 取出SD卡，波特率设置为115200，重新上电，设备将从eMMC启动系统，系统启动后自动登录root用户，串口调试终端会打印如下类似启动信息。"Bootdev(atags)：mmc
 0"表示从eMMC启动。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image113.png"
-style="width:5.55208in;height:3.04167in" />
+![](EdgePLC BL244说明书V1.1-images/image113.png)
 
 # 5.导轨安装
 
 配备导轨卡扣分为下段式短款导轨结构。此设计预留了充足的螺丝锁付空间，便于用户进行安装操作。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image114.png"
-style="width:1.42569in;height:2.77153in"
-alt="8aec9eb215acbbce3b8954b2e1062111_compress" /><img
-src="EdgePLC BL244说明书V1.1-images/image115.png"
-style="width:1.41389in;height:2.76042in"
-alt="8aec9eb215acbbce3b8954b2e1062111_compress" />
+![8aec9eb215acbbce3b8954b2e1062111_compress](EdgePLC BL244说明书V1.1-images/image114.png)![8aec9eb215acbbce3b8954b2e1062111_compress](EdgePLC BL244说明书V1.1-images/image115.png)
 
 将卡扣垂直向下按压，直至其完全嵌入并锁定于导轨底部，即可完成安装。长导轨卡无需额外卡扣，因其内部已预设专用凹槽结构，可直接实现稳固连接。
 
-<img
-src="EdgePLC BL244说明书V1.1-images/image116.png"
-style="width:0.83611in;height:1.94236in"
-alt="ac31d771be6b72005cba9ec2e46da2bc_compress" />
+![ac31d771be6b72005cba9ec2e46da2bc_compress](EdgePLC BL244说明书V1.1-images/image116.png)
 
 # 6.软件支持
 
