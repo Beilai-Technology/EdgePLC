@@ -8,17 +8,15 @@
 
 
 
-EdgePLC BL233系列
+EdgePLC BL233系列说明书
+
+EdgePLC BL233工业边缘控制器
 
 
 
 ![EdgePLC A款 (2)](EdgePLC BL233说明书V1.1-images/image2.jpeg)
 
-说明书
 
-
-
-EdgePLC BL233工业边缘控制器
 
 **前言**
 
