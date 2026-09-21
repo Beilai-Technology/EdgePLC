@@ -1,0 +1,56 @@
+﻿site_name: EdgePLC Docs
+site_description: Official documentation for EdgePLC controller products
+site_url: https://beilai-technology.github.io/EdgePLC/
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            首页: Home
+            EdgePLC说明书: EdgePLC Manuals
+            BL233 说明书: BL233 Manual
+            BL234 说明书: BL234 Manual
+            BL235 说明书: BL235 Manual
+            BL237 说明书: BL237 Manual
+            BL241 说明书: BL241 Manual
+            BL244 说明书: BL244 Manual
+            BL245 说明书: BL245 Manual
+            BL246 说明书: BL246 Manual
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  logo: assets/图片材料/钡铼技术英文logo.png
+  favicon: assets/图片材料/钡铼技术英文logo.png
+  palette:
+    - scheme: default
+      primary: light-blue
+      accent: blue
+
+nav:
+  - 首页: index.md
+  - EdgePLC说明书:
+      - BL233 说明书: EdgePLC说明书/EdgePLC BL233说明书V1.1.md
+      - BL234 说明书: EdgePLC说明书/EdgePLC BL234说明书V1.1.md
+      - BL235 说明书: EdgePLC说明书/EdgePLC BL235说明书V1.1.md
+      - BL237 说明书: EdgePLC说明书/EdgePLC BL237说明书V1.1.md
+      - BL241 说明书: EdgePLC说明书/EdgePLC BL241说明书V1.1.md
+      - BL244 说明书: EdgePLC说明书/EdgePLC BL244说明书V1.1.md
+      - BL245 说明书: EdgePLC说明书/EdgePLC BL245说明书V1.1.md
+      - BL246 说明书: EdgePLC说明书/EdgePLC BL246说明书V1.1.md
+
+extra_css:
+  - assets/custom.css
