@@ -1,7 +1,5 @@
 
 
-![EdgePLC A款 (2)](EdgePLC BL235说明书V1.1-images/image2.jpeg)
-
 版本：V1.1
 
 日期：2026-09-10
