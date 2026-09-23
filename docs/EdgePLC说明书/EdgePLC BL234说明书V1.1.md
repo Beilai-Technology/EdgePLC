@@ -1,8 +1,11 @@
 
 
 版本：V1.1
+
 日期：2026-09-10
+
 版权：**深圳市钡铼技术有限公司
+
 **网址：[www.bliiot.cn](http://www.bliiot.cn)
 
 EdgePLC BL234系列说明书
