@@ -1,25 +1,18 @@
 
 
-![EdgePLC A款 (2)](EdgePLC BL245说明书V1.1-images/image2.jpeg)
-
 版本：V1.1
+
 日期：2026-09-10
+
 版权：**深圳市钡铼技术有限公司
+
 **网址：[www.bliiot.cn](http://www.bliiot.cn)
 
+EdgePLC BL245系列说明书
 
 
-EdgePLC BL245系列
+![EdgePLC A款 (2)](EdgePLC BL245说明书V1.1-images/image2.jpeg)
 
-
-
-![](EdgePLC BL245说明书V1.1-images/image1.png)
-
-说明书
-
-
-
-EdgePLC BL245工业AI边缘控制器
 
 **前言**
 
