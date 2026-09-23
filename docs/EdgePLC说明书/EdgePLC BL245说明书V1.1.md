@@ -10,6 +10,8 @@
 
 EdgePLC BL245系列说明书
 
+EdgePLC BL245工业AI边缘控制器
+
 
 ![EdgePLC A款 (2)](EdgePLC BL245说明书V1.1-images/image2.jpeg)
 
