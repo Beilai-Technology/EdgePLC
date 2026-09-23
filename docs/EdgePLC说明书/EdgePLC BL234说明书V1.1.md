@@ -1,25 +1,17 @@
 
 
-![EdgePLC A款 (2)](EdgePLC BL234说明书V1.1-images/image2.jpeg)
-
 版本：V1.1
 日期：2026-09-10
 版权：**深圳市钡铼技术有限公司
 **网址：[www.bliiot.cn](http://www.bliiot.cn)
 
-
-
-EdgePLC BL234系列
-
-
-
-![](EdgePLC BL234说明书V1.1-images/image1.png)
-
-说明书
-
-
+EdgePLC BL234系列说明书
 
 EdgePLC BL234工业边缘控制器
+
+
+![EdgePLC A款 (2)](EdgePLC BL234说明书V1.1-images/image2.jpeg)
+
 
 **前言**
 
